@@ -1,4 +1,4 @@
-#include "Coordinate.h"
+#include "Coordinates.h"
 #include <iostream>
 #include <cassert>
 
@@ -15,11 +15,11 @@ void runTest(bool condition, const std::string& testName) {
 int main() {
     
     // Test the parameterized constructor
-    Coordinate coord1(10, 20);
+    Coordinates coord1(10, 20);
     runTest(coord1.getX() == 10 && coord1.getY() == 20, "Parameterized Constructor");
 
     // Test the getX method
-    Coordinate coord2(30, 40);
+    Coordinates coord2(30, 40);
     runTest(coord2.getX() == 30, "getX Method");
 
     // Test the getY method
@@ -35,9 +35,9 @@ int main() {
     runTest(coord1.getY() == 25, "setY Method");
 
     // Test the equality operator
-    Coordinate coord3(10, 20);
-    Coordinate coord4(10, 20);
-    Coordinate coord5(15, 25);
+    Coordinates coord3(10, 20);
+    Coordinates coord4(10, 20);
+    Coordinates coord5(15, 25);
     runTest(coord3 == coord4, "Equality Operator - Equal");
     runTest(!(coord3 == coord5), "Equality Operator - Not Equal");
 

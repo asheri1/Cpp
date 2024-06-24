@@ -1,7 +1,7 @@
-#ifndef COORDINATE_H
-#define COORDINATE_H
+#ifndef COORDINATES_H
+#define COORDINATES_H
 
-class Coordinate
+class Coordinates
 {
 private:
     int xValue;
@@ -9,7 +9,7 @@ private:
 
 public:
     // constructor
-    Coordinate(int x, int y);
+    Coordinates(int x=0, int y=0); // default constractor (0,0)
 
     // getters
     int getX() const;
@@ -20,7 +20,7 @@ public:
     void setY(int y);
 
     // equality operator
-    bool operator==(const Coordinate& other) const;
+    bool operator==(const Coordinates& other) const;
 
 };
 
