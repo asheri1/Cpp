@@ -9,15 +9,19 @@
 class FileParser
 {
 private:
-    std::vector<std::vector<char>> house_layout;
+    std::vector<std::vector<char>> houseLayout;
     Coordinates dockingStation;
     int batteryCapacity;
     int maxStepsAllowed;
     void parseFile(const std::string& file_path);
 
 public:
+    
+    // constructor
     FileParser(const std::string& file_path);
-    std::vector<std::vector<char>>& getHouseLayout() const; 
+    
+    // getters 
+    std::vector<std::vector<char>>& getHouseLayout(); 
     Coordinates getDockingCoordinates() const;
     int getBatteryCapacity() const;
     int getMaxStepsAllowed() const;
