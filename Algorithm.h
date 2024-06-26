@@ -2,7 +2,7 @@
 #define ALGORITHM_H
 
 #include "Coordinates.h"
-#include "VaccumCleaner.h"
+#include "VacuumCleaner.h"
 #include <vector>
 #include <stack>
 

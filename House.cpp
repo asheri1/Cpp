@@ -33,4 +33,6 @@ int House::getDirtLevel(const Coordinates& co) const {
     return houseLayout[co.getY()][co.getX()] -'0';
 }
 
-int House::setDirtLevel(const Coordinates& co){}
+int House::decreseDirtLevel(const Coordinates& co, int cleanFactor=1){
+       /////////////////////////////// to implement ///////////////////////////////////
+}

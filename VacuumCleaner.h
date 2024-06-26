@@ -11,8 +11,6 @@ private:
     House house;
     Coordinates currentLocation;
     int battery;
-    int remainedSteps;
-    int totalTakenSteps;
     int batteryCapacity;
 
 public:

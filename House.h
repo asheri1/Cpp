@@ -28,7 +28,7 @@ public:
     int getDirtLevel(const Coordinates& co) const;
 
     // setters
-    int setDirtLevel(const Coordinates& co);
+    int decreseDirtLevel(const Coordinates& co, int cleanFactor=1);
 };
 
 #endif 

@@ -20,13 +20,8 @@ public:
     Coordinates getCoordinatesS() const;
     Coordinates getCoordinatesW() const;
 
-       // setters
-    // void setX(int x);
-    // void setY(int y);
-
     // equality operator
     bool operator==(const Coordinates& other) const;
-
 };
 
 #endif 
