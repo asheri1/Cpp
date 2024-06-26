@@ -22,15 +22,15 @@ void FileParser::parseFile(const std::string& file_path) {
 
     while (std::getline(file ,line)){
         std::vector<char> row = std::vector<char>(line.begin(), line.end());
-        houseLayout.push_back(row);
+        layout.push_back(row);
     }
 
     // find the '@' character in the houseLayout, i.e. docking station coordinates.
     bool found_docking = false;
 
-    for (int y = 0; y < (int)houseLayout.size(); ++y) {
-        for (int x = 0; x < (int)houseLayout[y].size(); ++x) {
-            if (houseLayout[y][x] == '@') {
+    for (int y = 0; y < (int)layout.size(); ++y) {
+        for (int x = 0; x < (int)layout[y].size(); ++x) {
+            if (layout[y][x] == '@') {
                 dockingStation = Coordinates(x, y);
                 found_docking = true;
                 break;
@@ -47,9 +47,8 @@ void FileParser::parseFile(const std::string& file_path) {
 
 // getters implementations.
 std::vector<std::vector<char>>& FileParser::getHouseLayout(){
-    return houseLayout;
+    return layout;
 }
-
 
 Coordinates FileParser::getDockingCoordinates() const{
     return dockingStation;

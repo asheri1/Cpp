@@ -15,9 +15,14 @@ public:
     int getX() const;
     int getY() const;
 
-    // setters
-    void setX(int x);
-    void setY(int y);
+    Coordinates getCoordinatesN() const;
+    Coordinates getCoordinatesE() const;
+    Coordinates getCoordinatesS() const;
+    Coordinates getCoordinatesW() const;
+
+       // setters
+    // void setX(int x);
+    // void setY(int y);
 
     // equality operator
     bool operator==(const Coordinates& other) const;

@@ -9,7 +9,7 @@
 class FileParser
 {
 private:
-    std::vector<std::vector<char>> houseLayout;
+    std::vector<std::vector<char>> layout;
     Coordinates dockingStation;
     int batteryCapacity;
     int maxStepsAllowed;

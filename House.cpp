@@ -6,14 +6,19 @@ House::House(const std::string& file_path){
     dockingStation  = parser.getDockingCoordinates();
     batteryCapacity = parser.getBatteryCapacity();
     maxStepsAllowed = parser.getMaxStepsAllowed();
+    fillLayoutMissingWalls();
+}
+
+void House::fillLayoutMissingWalls(){
+   /////////////////////////////// to implement ///////////////////////////////////
 }
 
 bool House::isWall(const Coordinates& co) const {
-    return co == dockingStation;
+    return houseLayout[co.getY()][co.getX()] == '#';
 }
 
 bool House::isDockingStation(const Coordinates& co) const {
-    return houseLayout[co.getY()][co.getX()] == '@';
+    return co == dockingStation;
 }
 
 Coordinates House::getDockingCoordinates() const {
@@ -23,15 +28,9 @@ Coordinates House::getDockingCoordinates() const {
 int House::getDirtLevel(const Coordinates& co) const {
     if (isWall(co) || isDockingStation(co))
     {
-       return -1; // edge case
+       return 0; // edge case
     }
     return houseLayout[co.getY()][co.getX()] -'0';
 }
 
-int House::getBatteryCapacity() const {
-    return batteryCapacity;
-}
-
-int House::getMaxStepsAllowed() const {
-    return maxStepsAllowed;
-}
+int House::setDirtLevel(const Coordinates& co){}

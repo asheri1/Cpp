@@ -10,6 +10,8 @@ class House
 {
 private:
     std::vector<std::vector<char>> houseLayout;
+    void fillLayoutMissingWalls();
+
     Coordinates dockingStation;
     int batteryCapacity;
     int maxStepsAllowed;
@@ -24,8 +26,9 @@ public:
     // getters
     Coordinates getDockingCoordinates() const;
     int getDirtLevel(const Coordinates& co) const;
-    int getBatteryCapacity() const;
-    int getMaxStepsAllowed() const;
+
+    // setters
+    int setDirtLevel(const Coordinates& co);
 };
 
 #endif 
