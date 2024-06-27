@@ -1,16 +1,31 @@
 #include "House.h"
 
-House::House(const std::string& file_path){
-    FileParser parser(file_path); 
-    houseLayout     = parser.getHouseLayout();
-    dockingStation  = parser.getDockingCoordinates();
-    batteryCapacity = parser.getBatteryCapacity();
-    maxStepsAllowed = parser.getMaxStepsAllowed();
+
+House::House(const FileParser& parser) 
+    : parser(parser),
+      houseLayout(parser.getLayout()),
+      dockingStation(parser.getDockingCoordinates()),
+      batteryCapacity(parser.getBatteryCapacity()),
+      maxStepsAllowed(parser.getMaxStepsAllowed()),
+      totalDirt(0) {
+    
+    calculateTotalDirt();
     fillLayoutMissingWalls();
+
 }
 
 void House::fillLayoutMissingWalls(){
    /////////////////////////////// to implement ///////////////////////////////////
+}
+
+void House::calculateTotalDirt(){
+    for (const auto& row : houseLayout) {
+        for (const auto& cellDirt : row) {
+            if (cellDirt >= '1' && cellDirt <= '9') {
+                totalDirt += cellDirt - '0';
+            }
+        }
+    }
 }
 
 bool House::isWall(const Coordinates& co) const {

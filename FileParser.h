@@ -21,7 +21,7 @@ public:
     FileParser(const std::string& file_path);
     
     // getters 
-    std::vector<std::vector<char>>& getHouseLayout(); 
+    std::vector<std::vector<char>> getLayout() const; 
     Coordinates getDockingCoordinates() const;
     int getBatteryCapacity() const;
     int getMaxStepsAllowed() const;

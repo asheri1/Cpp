@@ -8,6 +8,7 @@
 class VacuumCleaner
 {
 private:
+    FileParser parser;
     House house;
     Coordinates currentLocation;
     int battery;
@@ -15,10 +16,10 @@ private:
 
 public:
     // construstor
-    VacuumCleaner(const House& house);
+    VacuumCleaner(const House& house, const FileParser& parser);
 
     void charge(); 
-    void move();
+    void move(char direction);
     void stay();
     void clean();
 
@@ -27,6 +28,7 @@ public:
     int getBatteryCapacity() const;
     int getMaxStepsAllowed() const;
     bool isAtDocking() const;
+    bool isCharged() const;
 
     bool sensorWallN() const;
     bool sensorWallE() const;

@@ -5,7 +5,7 @@
 #include "House.h"
 #include "Algorithm.h"
 #include "VacuumCleaner.h"
-#include "OutputGenerator.h"
+#include "OutputHandler.h"
 
 
 class Runner {
@@ -15,7 +15,7 @@ private:
     House& house;
     VacuumCleaner& vacuum;
     Algorithm& algorithm;
-    OutputGenerator& outputer;
+    OutputHandler& outputer;
     
     int totalTakenSteps;
     int remainedSteps;

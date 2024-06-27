@@ -9,16 +9,20 @@
 class House
 {
 private:
-    std::vector<std::vector<char>> houseLayout;
+
+    FileParser parser;
+    std::vector<std::vector<char>>& houseLayout;
     void fillLayoutMissingWalls();
+    void calculateTotalDirt();
 
     Coordinates dockingStation;
     int batteryCapacity;
     int maxStepsAllowed;
+    int totalDirt;
 
 public:
     // constructor
-    House(const std::string& file_path);
+    House(const FileParser& parser);
 
     bool isWall(const Coordinates& co) const;
     bool isDockingStation(const Coordinates& co) const;
@@ -26,9 +30,11 @@ public:
     // getters
     Coordinates getDockingCoordinates() const;
     int getDirtLevel(const Coordinates& co) const;
+    int getTotalDirt() const;
 
     // setters
     int decreseDirtLevel(const Coordinates& co, int cleanFactor=1);
+    
 };
 
 #endif 
