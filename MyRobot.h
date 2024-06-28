@@ -1,5 +1,5 @@
-#ifndef RUNNER_H
-#define RUNNER_H
+#ifndef MYROBOT_H
+#define MYROBOT_H
 
 #include "FileParser.h"
 #include "House.h"
@@ -8,20 +8,20 @@
 #include "OutputHandler.h"
 
 
-class Runner {
+class myrobot {
 
 private:
-    FileParser& parser;
-    House& house;
-    VacuumCleaner& vacuum;
-    Algorithm& algorithm;
-    OutputHandler& outputer;
+    FileParser parser;
+    House house;
+    VacuumCleaner cleaner;
+    Algorithm algorithm;
+    OutputHandler outputer;
     
     int totalTakenSteps;
     int remainedSteps;
 
 public:
-    Runner(const House& house, VacuumCleaner& vacuum, Algorithm& algorithm);
+    myrobot(FileParser& parser, House& house, VacuumCleaner& vacuum, Algorithm& algorithm, OutputHandler& outputer);
     void run();
 
 };

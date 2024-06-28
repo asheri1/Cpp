@@ -6,7 +6,7 @@
 #include <vector>
 #include <stack>
 
-// hey
+
 class Algorithm {
 private:
     std::vector<char> directions = {'N', 'E', 'S', 'W'};

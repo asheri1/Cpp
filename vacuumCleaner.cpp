@@ -66,9 +66,6 @@ int VacuumCleaner::getBatteryCapacity() const {
     return batteryCapacity;
 }
 
-int VacuumCleaner::getMaxStepsAllowed() const {
-    return parser.getMaxStepsAllowed();
-}
 
 bool VacuumCleaner::isAtDocking() const {
     return currentLocation == house.getDockingCoordinates();
