@@ -14,6 +14,7 @@ private:
     int batteryCapacity;
     int maxStepsAllowed;
     void parseFile(const std::string& file_path);
+    void fillLayoutMissingWalls();
 
 public:
     

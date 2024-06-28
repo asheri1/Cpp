@@ -10,15 +10,15 @@
 class Algorithm {
 private:
     std::vector<char> directions = {'N', 'E', 'S', 'W'};
+    std::vector<std::string> actions = {"MOVE", "CLEAN", "CHARGE"};
+    int moveCounter = 0;
     bool isReturningToDocking    = false;
-    std::stack<char> pathToDocking; // LIFO queue. 
+    std::stack<char> pathToDocking; // LIFO queue.
 
 public:
     Algorithm();
-    char nextMove(const Coordinates& dockingStation, const Coordinates& currentLocation,
-                         int dirtLevel, bool isWallN, bool isWallE, bool isWallS, bool isWallW, 
-                         int batteryLevel, bool isCharging);
-
+    int chooseAction(const VacuumCleaner& cleaner);
+    char chooseDirection(const VacuumCleaner& cleaner);
 };
 
 #endif 

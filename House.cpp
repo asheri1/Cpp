@@ -7,16 +7,9 @@ House::House(const FileParser& parser)
       dockingStation(parser.getDockingCoordinates()),
       batteryCapacity(parser.getBatteryCapacity()),
       maxStepsAllowed(parser.getMaxStepsAllowed()),
-      totalDirt(0) {
-    
-    calculateTotalDirt();
-    fillLayoutMissingWalls();
+      totalDirt(0)
+    {calculateTotalDirt();}
 
-}
-
-void House::fillLayoutMissingWalls(){
-   /////////////////////////////// to implement ///////////////////////////////////
-}
 
 void House::calculateTotalDirt(){
     for (const auto& row : houseLayout) {
@@ -48,6 +41,13 @@ int House::getDirtLevel(const Coordinates& co) const {
     return houseLayout[co.getY()][co.getX()] -'0';
 }
 
-int House::decreseDirtLevel(const Coordinates& co, int cleanFactor=1){
-       /////////////////////////////// to implement ///////////////////////////////////
+void House::decreseDirtLevel(const Coordinates& co, int cleanFactor=1){
+    int dirtLevel = getDirtLevel(co);
+    if (dirtLevel >= 1 && dirtLevel <= 9) {
+        int newDirtLevel = std::max(0, dirtLevel - cleanFactor);
+        houseLayout[co.getY()][co.getX()] = '0' + newDirtLevel; // assigining char(newDirtLevel)
+
+    int cleanedDirt = dirtLevel - newDirtLevel;
+    totalDirt -= cleanedDirt;
+    }
 }

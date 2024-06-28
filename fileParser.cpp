@@ -4,6 +4,7 @@
 // construnctor
 FileParser::FileParser(const std::string& file_path) { 
     parseFile(file_path);
+    fillLayoutMissingWalls();
 }
 
 void FileParser::parseFile(const std::string& file_path) {
@@ -45,6 +46,11 @@ void FileParser::parseFile(const std::string& file_path) {
     }
 
 }
+
+void FileParser::fillLayoutMissingWalls(){
+   /////////////////////////////// to implement ///////////////////////////////////
+}
+
 
 // getters implementations.
 std::vector<std::vector<char>> FileParser::getLayout() const{

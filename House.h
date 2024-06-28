@@ -11,8 +11,7 @@ class House
 private:
 
     FileParser parser;
-    std::vector<std::vector<char>>& houseLayout;
-    void fillLayoutMissingWalls();
+    std::vector<std::vector<char>> houseLayout;
     void calculateTotalDirt();
 
     Coordinates dockingStation;
@@ -33,8 +32,7 @@ public:
     int getTotalDirt() const;
 
     // setters
-    int decreseDirtLevel(const Coordinates& co, int cleanFactor=1);
-    
+    void decreseDirtLevel(const Coordinates& co, int cleanFactor=1);
 };
 
 #endif 

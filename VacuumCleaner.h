@@ -20,10 +20,10 @@ public:
 
     void charge(); 
     void move(char direction);
-    void stay();
     void clean();
 
     // getters
+    Coordinates getCurrentLocation() const;
     int getBatteryLevel() const;
     int getBatteryCapacity() const;
     int getMaxStepsAllowed() const;

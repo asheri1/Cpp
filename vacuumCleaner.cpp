@@ -8,11 +8,6 @@ VacuumCleaner::VacuumCleaner(const House& house, const FileParser& parser)
     batteryCapacity(parser.getBatteryCapacity()){}
 
 
-void VacuumCleaner::charge(){
-    if (!isCharged) battery++;
-    return;
-}
-
 void VacuumCleaner::charge() {
     if (isAtDocking() && battery < batteryCapacity) {
         battery += batteryCapacity / 20;
@@ -29,19 +24,19 @@ void VacuumCleaner::move(char direction) {
 
     switch (direction) {
         case 'N':
-            if (!sensorWallN()) {currentLocation = currentLocation.getCoordinatesN();}
+            currentLocation = currentLocation.getCoordinatesN();
             break;
 
         case 'E':
-            if (!sensorWallE()) {currentLocation = currentLocation.getCoordinatesE();}
+            currentLocation = currentLocation.getCoordinatesE();
             break;
 
         case 'S':
-            if (!sensorWallS()) {currentLocation = currentLocation.getCoordinatesS();}
+            currentLocation = currentLocation.getCoordinatesS();
             break;
 
         case 'W':
-            if (!sensorWallW()) {currentLocation = currentLocation.getCoordinatesW();}
+            currentLocation = currentLocation.getCoordinatesW();
             break;
     }
 
@@ -49,12 +44,6 @@ void VacuumCleaner::move(char direction) {
 }
 
 
-void VacuumCleaner::stay() {
-    // Do nothing, just consume battery
-    if (battery > 0) {
-        battery--;
-    }
-}
 
 void VacuumCleaner::clean() {
     int dirtLevel = house.getDirtLevel(currentLocation);
@@ -62,6 +51,11 @@ void VacuumCleaner::clean() {
         house.decreseDirtLevel(currentLocation);
         battery--;
     }
+}
+
+
+Coordinates VacuumCleaner::getCurrentLocation() const {
+    return currentLocation;
 }
 
 int VacuumCleaner::getBatteryLevel() const {
