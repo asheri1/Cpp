@@ -8,15 +8,15 @@
 class VacuumCleaner
 {
 private:
-    FileParser parser;
-    House house;
+    const FileParser& parser;
+    House& house;
     Coordinates currentLocation;
     int battery;
     int batteryCapacity;
 
 public:
     // construstor
-    VacuumCleaner(const House& house, const FileParser& parser);
+    VacuumCleaner(const FileParser& parser, House& house);
 
     void charge(); 
     void move(char direction);

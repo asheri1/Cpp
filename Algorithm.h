@@ -5,6 +5,7 @@
 #include "VacuumCleaner.h"
 #include <vector>
 #include <stack>
+#include <string>
 
 
 class Algorithm {
@@ -17,7 +18,7 @@ private:
 
 public:
     Algorithm();
-    int chooseAction(const VacuumCleaner& cleaner);
+    std::string chooseAction(const VacuumCleaner& cleaner);
     char chooseDirection(const VacuumCleaner& cleaner);
 };
 

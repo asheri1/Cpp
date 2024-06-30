@@ -19,7 +19,7 @@ int main() {
 
         // Test getHouseLayout
         std::cout << "House Layout:\n";
-        printHouseLayout(parser.getHouseLayout());
+        printHouseLayout(parser.getLayout());
 
         // Test getDockingCoordinates
         Coordinates dock = parser.getDockingCoordinates();

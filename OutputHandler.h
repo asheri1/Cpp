@@ -16,7 +16,8 @@ private:
     bool missionSucceeded;
 
 public:
-    // constructor
+    // constructors
+    OutputHandler();
     OutputHandler(const std::string& filePath);
 
     // setters.

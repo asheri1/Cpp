@@ -5,8 +5,6 @@ House::House(const FileParser& parser)
     : parser(parser),
       houseLayout(parser.getLayout()),
       dockingStation(parser.getDockingCoordinates()),
-      batteryCapacity(parser.getBatteryCapacity()),
-      maxStepsAllowed(parser.getMaxStepsAllowed()),
       totalDirt(0)
     {calculateTotalDirt();}
 

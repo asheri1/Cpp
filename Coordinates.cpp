@@ -22,10 +22,6 @@ Coordinates Coordinates::getCoordinatesW() const{
 }
 
 
-// void Coordinates::setX(int x) { this->xValue = x; }
-// void Coordinates::setY(int y) { this->yValue = y; }
-
-
 // equality operator
 bool Coordinates::operator==(const Coordinates& other) const {
     return (xValue == other.getX() && yValue == other.getY());

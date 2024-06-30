@@ -11,17 +11,17 @@
 class myrobot {
 
 private:
-    FileParser parser;
-    House house;
-    VacuumCleaner cleaner;
-    Algorithm algorithm;
-    OutputHandler outputer;
+    const FileParser& parser;
+    House& house;
+    VacuumCleaner& cleaner;
+    Algorithm& algorithm;
+    OutputHandler& outputer;
     
     int totalTakenSteps;
     int remainedSteps;
 
 public:
-    myrobot(FileParser& parser, House& house, VacuumCleaner& vacuum, Algorithm& algorithm, OutputHandler& outputer);
+    myrobot(const FileParser& parser, House& house, VacuumCleaner& vacuum, Algorithm& algorithm, OutputHandler& outputer);
     void run();
 
 };

@@ -1,6 +1,6 @@
 #include "VacuumCleaner.h"
 
-VacuumCleaner::VacuumCleaner(const House& house, const FileParser& parser)
+VacuumCleaner::VacuumCleaner(const FileParser& parser, House& house)
   : parser(parser),
     house(house),
     currentLocation(house.getDockingCoordinates()),

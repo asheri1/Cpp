@@ -15,8 +15,6 @@ private:
     void calculateTotalDirt();
 
     Coordinates dockingStation;
-    int batteryCapacity;
-    int maxStepsAllowed;
     int totalDirt;
 
 public:
