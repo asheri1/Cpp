@@ -39,7 +39,7 @@ int House::getDirtLevel(const Coordinates& co) const {
     return houseLayout[co.getY()][co.getX()] -'0';
 }
 
-void House::decreseDirtLevel(const Coordinates& co, int cleanFactor=1){
+void House::decreseDirtLevel(const Coordinates& co, int cleanFactor){
     int dirtLevel = getDirtLevel(co);
     if (dirtLevel >= 1 && dirtLevel <= 9) {
         int newDirtLevel = std::max(0, dirtLevel - cleanFactor);

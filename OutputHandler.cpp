@@ -27,10 +27,14 @@ OutputHandler::OutputHandler(const std::string& filePath)
 
 
 // logging a step.
-void OutputHandler::logStep(const std::string& step) {
-    stepsLog.push_back(step);
-    totalSteps++;
+void OutputHandler::logStep(const std::string& action) {
+    stepsLog.push_back(action);
 }
+
+void OutputHandler::logStep(const std::string& action, char direction){
+    stepsLog.push_back(action + " " + direction);
+}
+
 
 // setters.
 void OutputHandler::setRemainedDirt(int dirt) {

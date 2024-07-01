@@ -21,7 +21,9 @@ public:
     OutputHandler(const std::string& filePath);
 
     // setters.
-    void logStep(const std::string& step);
+    void logStep(const std::string& action);
+    void logStep(const std::string& action, char direction);
+
     void setRemainedDirt(int dirtLevel);
     void setVacuumStatus(bool isDead, bool missionSucceeded);
      

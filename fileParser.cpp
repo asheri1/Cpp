@@ -57,8 +57,8 @@ void FileParser::fillLayoutMissingWalls(){
     }
 
     // check if the top and bottom rows have walls 
-    if (layout[0].size() < cols) layout[0].resize(cols, ' ');
-    if (layout[rows - 1].size() < cols) layout[rows - 1].resize(cols, ' ');
+    if (static_cast<int>(layout[0].size()) < cols) layout[0].resize(cols, ' ');
+    if (static_cast<int>(layout[rows - 1].size()) < cols) layout[rows - 1].resize(cols, ' ');
 
     for (int i = 0; i < cols; ++i) {
         if (layout[0][i] != '#') layout[0][i] = '#';
@@ -67,7 +67,7 @@ void FileParser::fillLayoutMissingWalls(){
 
     // check if left and right columns have walls
     for (int i = 0; i < rows; ++i) {
-        if (layout[i].size() < cols) layout[i].resize(cols, ' ');
+        if (static_cast<int>(layout[i].size()) < cols) layout[i].resize(cols, ' ');
         if (layout[i][0] != '#') layout[i][0] = '#';
         if (layout[i][cols - 1] != '#') layout[i][cols - 1] = '#';
     }

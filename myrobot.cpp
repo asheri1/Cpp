@@ -22,27 +22,27 @@ void myrobot::run() {
 
     while (remainedSteps > 0 && cleaner.getBatteryLevel() > 0) {    
 
-        std::string nextAction = algorithm.chooseAction(cleaner);
+        std::string action = algorithm.chooseAction(cleaner);
 
-        if (nextAction == "MOVE"){
+        if (action == "MOVE"){
             char direction = algorithm.chooseDirection(cleaner);
             cleaner.move(direction);
-            outputer.logStep(nextAction);
+            outputer.logStep(action, direction);
         }
-        else if (nextAction == "CLEAN") {
+        else if (action == "CLEAN") {
             cleaner.clean();
+            outputer.logStep(action);
             remainedDirt--;
         }
-        else if (nextAction == "CHARGE") {
+        else if (action == "CHARGE") {
             cleaner.charge();
+            outputer.logStep(action);
         }
 
         totalTakenSteps++;
         remainedSteps--;
     }
 }
-
-
 
 
 int main(int argc, char* argv[]) {

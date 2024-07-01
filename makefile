@@ -1,36 +1,31 @@
-# Define the compiler
+# Compiler and flags
 CXX = g++
-
-# Define the compiler flags
 CXXFLAGS = -std=c++20 -Wall -Wextra -Werror -pedantic
 
-# Define the target executable
-TARGET = test
+# Project name
+TARGET = myrobot
 
-# Define the source files
-SRCS = Coordinate.cpp test.cpp
+# Source and header files
+SRCS = FileParser.cpp House.cpp VacuumCleaner.cpp OutputHandler.cpp myrobot.cpp
+HDRS = FileParser.h House.h VacuumCleaner.h Algorithm.h OutputHandler.h myrobot.h Coordinates.h
 
-# Define the object files
+# Object files
 OBJS = $(SRCS:.cpp=.o)
 
-# Default target to build the executable
+# Default rule
 all: $(TARGET)
 
-# Rule to build the target executable
+# Link the object files to create the executable
 $(TARGET): $(OBJS)
-	$(CXX) $(CXXFLAGS) -o $(TARGET) $(OBJS)
+	$(CXX) $(CXXFLAGS) -o $@ $^
 
-# Rule to build the object files
-%.o: %.cpp
+# Compile source files into object files
+%.o: %.cpp $(HDRS)
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
-# Rule to clean the build files
+# Clean up generated files
 clean:
 	rm -f $(OBJS) $(TARGET)
 
-# Rule to run the tests
-run: $(TARGET)
-	./$(TARGET)
-
 # Phony targets
-.PHONY: all clean run
+.PHONY: all clean
