@@ -48,8 +48,37 @@ void FileParser::parseFile(const std::string& file_path) {
 }
 
 void FileParser::fillLayoutMissingWalls(){
-   /////////////////////////////// to implement ///////////////////////////////////
+
+    // get roes and cols size
+    int rows = layout.size();
+    int cols = layout[0].size();
+    if (rows == 0 || cols == 0) {
+        throw std::runtime_error("Failed - File is empty, there is no House to clean.");
+    }
+
+    // check if the top and bottom rows have walls 
+    if (layout[0].size() < cols) layout[0].resize(cols, ' ');
+    if (layout[rows - 1].size() < cols) layout[rows - 1].resize(cols, ' ');
+
+    for (int i = 0; i < cols; ++i) {
+        if (layout[0][i] != '#') layout[0][i] = '#';
+        if (layout[rows - 1][i] != '#') layout[rows - 1][i] = '#';
+    }
+
+    // check if left and right columns have walls
+    for (int i = 0; i < rows; ++i) {
+        if (layout[i].size() < cols) layout[i].resize(cols, ' ');
+        if (layout[i][0] != '#') layout[i][0] = '#';
+        if (layout[i][cols - 1] != '#') layout[i][cols - 1] = '#';
+    }
+
+    // check the corners
+    if (layout[0][0] != '#') layout[0][0] = '#';
+    if (layout[0][cols - 1] != '#') layout[0][cols - 1] = '#';
+    if (layout[rows - 1][0] != '#') layout[rows - 1][0] = '#';
+    if (layout[rows - 1][cols - 1] != '#') layout[rows - 1][cols-1] ='#';
 }
+
 
 
 // getters implementations.
