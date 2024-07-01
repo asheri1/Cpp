@@ -30,8 +30,8 @@ void FileParser::parseFile(const std::string& file_path) {
     // find the docking station coordinates by '@' character in the houseLayout.
     bool found_docking = false;
 
-    for (int y = 0; y < (int)layout.size(); ++y) {
-        for (int x = 0; x < (int)layout[y].size(); ++x) {
+    for (int y = 0; y <  static_cast<int>(layout.size()); ++y) {
+        for (int x = 0; x <  static_cast<int>(layout[y].size()); ++x) {
             if (layout[y][x] == '@') {
                 dockingStation = Coordinates(x, y);
                 found_docking = true;

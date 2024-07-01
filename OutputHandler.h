@@ -7,7 +7,7 @@
 class OutputHandler
 {
 private:
-    std::string outputFilePath;
+    const std::string outputFilePath;
     std::vector<std::string> stepsLog;
 
     int totalSteps;
@@ -25,8 +25,8 @@ public:
     void setRemainedDirt(int dirtLevel);
     void setVacuumStatus(bool isDead, bool missionSucceeded);
      
-    // write to file method
-    void writeOutput();
+    // write to file method.
+    void writeOutput() const;
 };
 
 #endif

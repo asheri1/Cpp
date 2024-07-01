@@ -19,6 +19,7 @@ private:
     
     int totalTakenSteps;
     int remainedSteps;
+    int remainedDirt;
 
 public:
     myrobot(const FileParser& parser, House& house, VacuumCleaner& vacuum, Algorithm& algorithm, OutputHandler& outputer);

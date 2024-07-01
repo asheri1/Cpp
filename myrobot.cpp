@@ -13,7 +13,8 @@ myrobot::myrobot(const FileParser& parser, House& house, VacuumCleaner& cleaner,
       algorithm(algorithm),
       outputer(outputer),
       totalTakenSteps(0),
-      remainedSteps(parser.getMaxStepsAllowed()) {}
+      remainedSteps(parser.getMaxStepsAllowed()),
+      remainedDirt(house.getTotalDirt()) {}
 
 
 
@@ -26,12 +27,11 @@ void myrobot::run() {
         if (nextAction == "MOVE"){
             char direction = algorithm.chooseDirection(cleaner);
             cleaner.move(direction);
-            totalTakenSteps++;
-            remainedSteps--;   
+            outputer.logStep(nextAction);
         }
         else if (nextAction == "CLEAN") {
             cleaner.clean();
-            totalTakenSteps++;
+            remainedDirt--;
         }
         else if (nextAction == "CHARGE") {
             cleaner.charge();
@@ -55,7 +55,7 @@ int main(int argc, char* argv[]) {
     try {
         FileParser parser(argv[1]);             // parse the input file
         House house(parser);                    // create the house object
-        VacuumCleaner cleaner(parser, house);  // create the vacuum cleaner object
+        VacuumCleaner cleaner(parser, house);   // create the vacuum cleaner object
         Algorithm algorithm;                    // create the algorithm object
         OutputHandler outputer;                 // create the output handler object
 
