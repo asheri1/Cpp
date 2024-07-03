@@ -4,6 +4,7 @@
 #include "Coordinates.h"
 #include <vector>
 #include <string>
+#include <iostream>
 
 
 class FileParser
@@ -14,6 +15,13 @@ private:
     int batteryCapacity;
     int maxStepsAllowed;
     void parseFile(const std::string& file_path);
+    void checkLeftAndRightWalls();
+    bool rowIsAWall(const std::vector<char>& row);
+    void checkUperWall();
+    void checkLowerWall();
+    void checkBetweenRowsWall();
+    void cleanLayout();
+    void cleanUnnecessaryWalls();
     void fillLayoutMissingWalls();
 
 public:
@@ -26,6 +34,7 @@ public:
     Coordinates getDockingCoordinates() const;
     int getBatteryCapacity() const;
     int getMaxStepsAllowed() const;
+
 };
 
 
