@@ -3,7 +3,7 @@
 #include <cassert>
 
 void test_house_initialization() {
-    FileParser parser("house_input.txt");
+    FileParser parser("input_files/house_input.txt");
     House house(parser);
 
     // Check the docking station coordinates

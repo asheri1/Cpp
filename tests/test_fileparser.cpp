@@ -12,18 +12,19 @@ void printHouseLayout(const std::vector<std::vector<char>>& layout) {
     }
 }
 
-int main() {
-    try {
-        // Replace "house_input.txt" with the path to your actual test input file
-        FileParser parser("house_input.txt");
 
+void test(std::string filename) {
+    
+    try {
+        FileParser parser(filename);
+    
         // Test getHouseLayout
         std::cout << "House Layout:\n";
         printHouseLayout(parser.getLayout());
 
         // Test getDockingCoordinates
         Coordinates dock = parser.getDockingCoordinates();
-        std::cout << "Docking Station Coordinates: (" << dock.getX() << ", " << dock.getY() << ")\n";
+        std::cout << "\nDocking Station Coordinates: (" << dock.getX() << ", " << dock.getY() << ")\n";
 
         // Test getBatteryCapacity
         int batteryCapacity = parser.getBatteryCapacity();
@@ -31,11 +32,45 @@ int main() {
 
         // Test getMaxStepsAllowed
         int maxSteps = parser.getMaxStepsAllowed();
-        std::cout << "Max Steps Allowed: " << maxSteps << "\n";
+        std::cout << "Max Steps Allowed: " << maxSteps << "\n\n";
     } catch (const std::exception& e) {
         std::cerr << "Error: " << e.what() << '\n';
-        return 1;
     }
+}
+
+
+
+
+
+
+int main() {
+    
+    std::string files[] = {"input_files/house_input.txt", 
+                           "input_files/house_input2.txt", 
+                           "input_files/house_input3.txt", 
+                           "input_files/house_input4.txt",
+                           "input_files/house_input5.txt",
+                           "input_files/house_input6.txt",
+                           "input_files/house_input7.txt",
+                           "input_files/house_input8.txt",
+                           "input_files/house_input9.txt",
+                           "input_files/house_input10.txt",
+                           "input_files/house_input11.txt",
+                           "input_files/house_input12.txt",
+                           "input_files/house_input13.txt",
+                           "input_files/house_input14.txt", 
+                           "input_files/house_input15.txt"};
+
+    int number_of_files = 0;
+    for(std::string file : files){
+        number_of_files++;
+    }
+    
+    for(int i = 0; i < number_of_files; i++){
+        std::cout << "Testing: " << files[i] <<"\n";
+        test(files[i]);
+    }
+    
 
     return 0;
 }

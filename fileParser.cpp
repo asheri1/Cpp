@@ -123,6 +123,11 @@ void FileParser::checkBetweenRowsWall() {
 void FileParser::cleanLayout() {
     for (auto& row : layout) { 
         for (auto it = row.begin(); it != row.end(); ) { 
+            if (*it == ' ') // space char -> turn into clean floor.
+            {
+                *it = '0';
+            }
+            
             if (!(std::isdigit(*it) || *it == '#' || *it == '@')) {
                 it = row.erase(it); 
             } else {

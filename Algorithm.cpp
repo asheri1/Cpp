@@ -37,21 +37,24 @@ int Algorithm::calcDistanceFromDockingStation(){
     return pathToDocking.size();
 }
 
-//std::vector<std::string> actions = {"MOVE", "CLEAN", "CHARGE", "DONE"};
+//std::vector<std::string> actions = {"MOVE", "CLEAN", "CHARGE"};
 std::string Algorithm::chooseAction(const VacuumCleaner& cleaner) {
     
-    // If we have reached the maximum number of steps - end a program
-    if(moveCounter == cleaner.getMaxStepsAllowed()) {
-        return actions[3]; // DONE
-    }
+    
+    isReturningToDocking = false;
+
     int distance_from_docking_station = calcDistanceFromDockingStation();
     // The distance from the charging station is equal to the remaining battery
-    if(cleaner.getBatteryLevel() <= distance_from_docking_station) {
-        return actions[2]; // CHARGE    
+    if(cleaner.isAtDocking() && cleaner.getBatteryLevel() < cleaner.getBatteryCapacity()){
+        return actions[2]; // CHARGE
+    }
+    if(cleaner.getBatteryLevel() <= distance_from_docking_station+1) {
+        isReturningToDocking = true;
+        return actions[0]; // MOVE    
     }
     //(cleaner.getBatteryLevel() > moveCounter)
     else { 
-        // still dirty - keep cleannig
+        // still dirty - keep cleaning
         if(cleaner.dirtSensor() > 0) {
             return actions[1]; // CLEAN
         }
@@ -61,10 +64,18 @@ std::string Algorithm::chooseAction(const VacuumCleaner& cleaner) {
         }
     }
 }
+// move = when yoou are going to the next cell. 1.floor is cleaned (dirt=0). 2.have to go back to.
 
 //std::vector<char> directions = {'N', 'E', 'S', 'W'};
 char Algorithm::chooseDirection(const VacuumCleaner& cleaner) {
+
+    if(isReturningToDocking){
+        char dirction = pathToDocking.top();
+        pathToDocking.pop(); 
+        return dirction;
+    }
     
+
     std::vector<char> possibleDirections;
 
     if (cleaner.sensorWallN()) {  possibleDirections.push_back('N'); }

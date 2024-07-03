@@ -11,7 +11,7 @@
 class Algorithm {
 private:
     std::vector<char> directions = {'N', 'E', 'S', 'W'};
-    std::vector<std::string> actions = {"MOVE", "CLEAN", "CHARGE", "DONE"};
+    std::vector<std::string> actions = {"MOVE", "CLEAN", "CHARGE"};
     int moveCounter = 0;
     bool isReturningToDocking    = false;
     std::stack<char> pathToDocking; // LIFO queue.

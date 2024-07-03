@@ -9,7 +9,7 @@
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceFolder}/a.out",
-            "args": [],
+            "args": ["input_files/house_input2.txt"],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
             "environment": [],

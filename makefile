@@ -6,7 +6,7 @@ CXXFLAGS = -std=c++20 -Wall -Wextra -Werror -pedantic
 TARGET = myrobot
 
 # Source and header files
-SRCS = FileParser.cpp House.cpp VacuumCleaner.cpp OutputHandler.cpp myrobot.cpp
+SRCS = myrobot.cpp Coordinates.cpp FileParser.cpp House.cpp VacuumCleaner.cpp Algorithm.cpp OutputHandler.cpp 
 HDRS = FileParser.h House.h VacuumCleaner.h Algorithm.h OutputHandler.h myrobot.h Coordinates.h
 
 # Object files
@@ -20,7 +20,7 @@ $(TARGET): $(OBJS)
 	$(CXX) $(CXXFLAGS) -o $@ $^
 
 # Compile source files into object files
-%.o: %.cpp $(HDRS)
+%.o: %.cpp $(SRCS)
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 # Clean up generated files

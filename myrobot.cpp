@@ -20,9 +20,13 @@ myrobot::myrobot(const FileParser& parser, House& house, VacuumCleaner& cleaner,
 
 void myrobot::run() {
 
-    while (remainedSteps > 0 && cleaner.getBatteryLevel() > 0) {    
+            std::cout << "run" << std::endl;
 
+    while (remainedSteps > 0 && cleaner.getBatteryLevel() > 0) {   
+
+                
         std::string action = algorithm.chooseAction(cleaner);
+        std::cout << action << std::endl;
 
         if (action == "MOVE"){
             char direction = algorithm.chooseDirection(cleaner);
@@ -61,6 +65,7 @@ int main(int argc, char* argv[]) {
 
         // create myrobot object
         myrobot robot(parser, house, cleaner, algorithm, outputer);  
+        std::cout << "hi" << std::endl;
 
         // Run the vacuum cleaner simulation
         robot.run();

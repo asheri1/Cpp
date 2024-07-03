@@ -6,7 +6,7 @@ House::House(const FileParser& parser)
       houseLayout(parser.getLayout()),
       dockingStation(parser.getDockingCoordinates()),
       totalDirt(0)
-    {calculateTotalDirt();}
+      {calculateTotalDirt();}
 
 
 void House::calculateTotalDirt(){
@@ -48,4 +48,8 @@ void House::decreseDirtLevel(const Coordinates& co, int cleanFactor){
     int cleanedDirt = dirtLevel - newDirtLevel;
     totalDirt -= cleanedDirt;
     }
+}
+
+int House::getTotalDirt() const{
+    return totalDirt;
 }
