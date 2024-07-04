@@ -23,7 +23,7 @@ myrobot::myrobot(const FileParser& parser, House& house, VacuumCleaner& cleaner,
     
 
 void myrobot::run() {
-
+    
     while (remainedSteps > 0 && cleaner.getBatteryLevel() > 0) {   
                 
         std::string action = algorithm.chooseAction(cleaner);
@@ -42,6 +42,7 @@ void myrobot::run() {
             remainedDirt--;
         }
         else if (action == "CHARGE") {
+            std::cout << ", battery Level = " << cleaner.getBatteryLevel();
             cleaner.charge();
             outputer.logStep(action);
         }
@@ -51,15 +52,21 @@ void myrobot::run() {
         
         // Debugging
         if(action != "MOVE"){ std::cout << std::endl;}
-        if(action != "CLEAN"){
+        if(action == "MOVE"){
             house.printLayout();
             algorithm.printQueue();
             std::cout << "total Taken Steps = " << totalTakenSteps << std::endl;
             std::cout << "remained Steps = " << remainedSteps  << std::endl;
             std::cout << "battery Level = " << cleaner.getBatteryLevel() << std::endl;
-            std::cout << "distance from docking station = " << algorithm.getQueueSize() << "\n" << std::endl;      
+            std::cout << "remained Dirt; = " << getRemainedDirt() << std::endl;
+            std::cout << "distance from docking station = " << algorithm.calcDistanceFromDockingStation() << "\n" << std::endl;      
         }
     }
+}
+
+
+int myrobot::getRemainedDirt(){
+    return remainedDirt;
 }
 
 

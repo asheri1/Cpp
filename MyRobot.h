@@ -25,9 +25,9 @@ public:
     void printLocation(Coordinates currentLocation);
     myrobot(const FileParser& parser, House& house, VacuumCleaner& vacuum, Algorithm& algorithm, OutputHandler& outputer);
     void run();
+    int getRemainedDirt();
     House getHouse();
     void printLayout(House house);
-
 };
 
 #endif

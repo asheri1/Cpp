@@ -13,7 +13,6 @@ private:
     Coordinates currentLocation;
     int battery;
     int batteryCapacity;
-    bool isAtCharging = false;
 
 public:
     // construstor
@@ -27,16 +26,17 @@ public:
     Coordinates getCurrentLocation() const;
     int getBatteryLevel() const;
     int getBatteryCapacity() const;
-    int getMaxStepsAllowed() const;
+    //int getMaxStepsAllowed() const;
     bool isAtDocking() const;
     bool isCharged() const;
+    
+
     bool sensorWallN() const;
     bool sensorWallE() const;
     bool sensorWallS() const;
     bool sensorWallW() const;
-    int dirtSensor() const;
-    bool isAtChargingState() const;
 
+    int dirtSensor() const;
 };
 
 #endif
