@@ -1,4 +1,5 @@
 #include "Coordinates.h"
+#include <iostream>
 
 Coordinates::Coordinates(int x, int y): xValue(x), yValue(y) {}
 
@@ -26,4 +27,5 @@ Coordinates Coordinates::getCoordinatesW() const{
 bool Coordinates::operator==(const Coordinates& other) const {
     return (xValue == other.getX() && yValue == other.getY());
 }
+
 

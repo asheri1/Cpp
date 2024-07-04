@@ -21,6 +21,8 @@ public:
     std::string chooseAction(const VacuumCleaner& cleaner);
     char chooseDirection(const VacuumCleaner& cleaner);
     int calcDistanceFromDockingStation();
+    void printQueue();
+    int getQueueSize();
 };
 
 #endif 

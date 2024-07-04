@@ -4,6 +4,11 @@
 #include <stdexcept>
 #include <string>
 
+void myrobot::printLocation(Coordinates currentLocation) {
+    int x = currentLocation.getX();
+    int y = currentLocation.getY();
+    std::cout << "currentLocation: layout[" << x << "][" << y << "] = " << house.getLayoutChar(x,y) << "\t";//std::endl;
+}
 
 
 myrobot::myrobot(const FileParser& parser, House& house, VacuumCleaner& cleaner, Algorithm& algorithm, OutputHandler& outputer)
@@ -15,21 +20,19 @@ myrobot::myrobot(const FileParser& parser, House& house, VacuumCleaner& cleaner,
       totalTakenSteps(0),
       remainedSteps(parser.getMaxStepsAllowed()),
       remainedDirt(house.getTotalDirt()) {}
-
-
+    
 
 void myrobot::run() {
 
-            std::cout << "run" << std::endl;
-
     while (remainedSteps > 0 && cleaner.getBatteryLevel() > 0) {   
-
                 
         std::string action = algorithm.chooseAction(cleaner);
-        std::cout << action << std::endl;
-
+        printLocation(cleaner.getCurrentLocation());
+        std::cout << "action: " << action;
+        
         if (action == "MOVE"){
             char direction = algorithm.chooseDirection(cleaner);
+            std::cout << ", direction: " << direction << std::endl;
             cleaner.move(direction);
             outputer.logStep(action, direction);
         }
@@ -45,6 +48,17 @@ void myrobot::run() {
 
         totalTakenSteps++;
         remainedSteps--;
+        
+        // Debugging
+        if(action != "MOVE"){ std::cout << std::endl;}
+        if(action != "CLEAN"){
+            house.printLayout();
+            algorithm.printQueue();
+            std::cout << "total Taken Steps = " << totalTakenSteps << std::endl;
+            std::cout << "remained Steps = " << remainedSteps  << std::endl;
+            std::cout << "battery Level = " << cleaner.getBatteryLevel() << std::endl;
+            std::cout << "distance from docking station = " << algorithm.getQueueSize() << "\n" << std::endl;      
+        }
     }
 }
 
@@ -65,8 +79,7 @@ int main(int argc, char* argv[]) {
 
         // create myrobot object
         myrobot robot(parser, house, cleaner, algorithm, outputer);  
-        std::cout << "hi" << std::endl;
-
+        
         // Run the vacuum cleaner simulation
         robot.run();
     } 
@@ -77,4 +90,14 @@ int main(int argc, char* argv[]) {
     }
 
     return 0;
+}
+
+
+House myrobot::getHouse(){
+    return house; 
+}
+
+
+void myrobot::printLayout(House house){
+    return house.printLayout();
 }

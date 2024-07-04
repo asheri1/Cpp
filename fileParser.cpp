@@ -26,8 +26,12 @@ void FileParser::parseFile(const std::string& file_path) {
         layout.push_back(row);
     }
 
+    std::cout << "layout before fillLayoutMissingWalls: " << std::endl;
+    printLayout();
+    std::cout << "layout after fillLayoutMissingWalls: " << std::endl;
     fillLayoutMissingWalls();
-    
+    printLayout();
+    std::cout << "\n" << std::endl;
     // find the docking station coordinates by '@' character in the houseLayout.
     bool found_docking = false;
 
@@ -189,7 +193,6 @@ void FileParser::fillLayoutMissingWalls() {
 }
 
 
-
 // getters implementations.
 std::vector<std::vector<char>> FileParser::getLayout() const{
     return layout;
@@ -205,4 +208,15 @@ int FileParser::getBatteryCapacity() const{
 
 int FileParser::getMaxStepsAllowed() const{
     return maxStepsAllowed;
+}
+
+void FileParser::printLayout() {
+    
+    std::vector<std::vector<char>> layout = getLayout();
+    for (const auto& line : layout) {
+        for (char ch : line) {
+            std::cout << ch << " ";
+        }
+        std::cout << std::endl;
+    }
 }

@@ -10,7 +10,7 @@ private:
 public:
     // constructor
     Coordinates(int x=0, int y=0); // default constractor (0,0)
-
+    
     // getters
     int getX() const;
     int getY() const;

@@ -35,6 +35,8 @@ public:
     int getBatteryCapacity() const;
     int getMaxStepsAllowed() const;
 
+    void printLayout();
+
 };
 
 

@@ -28,9 +28,15 @@ public:
     Coordinates getDockingCoordinates() const;
     int getDirtLevel(const Coordinates& co) const;
     int getTotalDirt() const;
+    void printLayout();
+    
 
     // setters
     void decreseDirtLevel(const Coordinates& co, int cleanFactor=1);
+
+
+
+    char getLayoutChar(int x, int y);
 };
 
 #endif 

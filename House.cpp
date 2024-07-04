@@ -20,6 +20,7 @@ void House::calculateTotalDirt(){
 }
 
 bool House::isWall(const Coordinates& co) const {
+    //std::cout << "isWall: houseLayout[" << co.getX() << "][" << co.getY() <<  "] = " << houseLayout[co.getY()][co.getX()] << std::endl;
     return houseLayout[co.getY()][co.getX()] == '#';
 }
 
@@ -32,8 +33,7 @@ Coordinates House::getDockingCoordinates() const {
 }
 
 int House::getDirtLevel(const Coordinates& co) const {
-    if (isWall(co) || isDockingStation(co))
-    {
+    if (isWall(co) || isDockingStation(co)) {
        return 0; // edge case
     }
     return houseLayout[co.getY()][co.getX()] -'0';
@@ -53,3 +53,14 @@ void House::decreseDirtLevel(const Coordinates& co, int cleanFactor){
 int House::getTotalDirt() const{
     return totalDirt;
 }
+
+void House::printLayout() {
+    for (const auto& line : houseLayout) {
+        for (char ch : line) {
+            std::cout << ch << " ";
+        }
+        std::cout << std::endl;
+    }
+}
+
+char House::getLayoutChar(int x, int y) {return houseLayout[y][x];}
