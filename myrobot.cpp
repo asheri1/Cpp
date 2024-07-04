@@ -29,12 +29,8 @@ int myrobot::getRemainedDirt(){
 
 void myrobot::run() {
     
-    int i = 0;
     while (remainedSteps > 0 && cleaner.getBatteryLevel() > 0) {   
-        i++;
-        if(i % 150 == 0){
-            std::cout << "";    
-        }        
+        
         std::string action = algorithm.chooseAction(cleaner, remainedDirt);
         printLocation(cleaner.getCurrentLocation());
         std::cout << "action: " << action;
