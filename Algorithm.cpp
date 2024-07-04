@@ -40,9 +40,7 @@ int Algorithm::calcDistanceFromDockingStation(){
 //std::vector<std::string> actions = {"MOVE", "CLEAN", "CHARGE"};
 std::string Algorithm::chooseAction(const VacuumCleaner& cleaner) {
     
-    if(cleaner.isAtDocking() && cleaner.getBatteryLevel() == 1) {
-            return actions[2]; // CHARGE
-    }
+
     isReturningToDocking = false;
     int distance_from_docking_station = calcDistanceFromDockingStation();
 
@@ -52,8 +50,12 @@ std::string Algorithm::chooseAction(const VacuumCleaner& cleaner) {
         return actions[0]; // MOVE    
     }
     else if(cleaner.isAtDocking()){
+
+        if(cleaner.isAtChargingState() || cleaner.getBatteryLevel() == 1){
+            return actions[2]; // CHARGE
+        }
         // Finish charging
-        if(cleaner.getBatteryLevel() == cleaner.getBatteryCapacity()){
+        if(cleaner.isCharged()){
             return actions[0]; // MOVE
         }
         // There is still some battery left, so you don't have to charge it
@@ -91,7 +93,10 @@ char Algorithm::chooseDirection(const VacuumCleaner& cleaner) {
             pathToDocking.pop(); 
             return dirction;
         }
-        return 'D'; 
+        
+        else{
+            isReturningToDocking = false;
+        }
     }
     
     std::vector<char> possibleDirections;

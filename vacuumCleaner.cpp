@@ -8,13 +8,16 @@ VacuumCleaner::VacuumCleaner(const FileParser& parser, House& house)
     batteryCapacity(parser.getBatteryCapacity()){}
 
 void VacuumCleaner::charge() {
+    isAtCharging = true; // start charging flag.
     if (isAtDocking() && battery < batteryCapacity) {
         battery += batteryCapacity / 20;
 
         // edge case
-        if (battery > batteryCapacity) {
+        if (battery >= batteryCapacity) {
             battery = batteryCapacity;
+            isAtCharging = false; // done charging flag.
         }
+        
     }
 }
 
@@ -70,28 +73,28 @@ bool VacuumCleaner::isCharged() const{
     return battery == batteryCapacity;
 }
 
+bool VacuumCleaner::isAtChargingState() const{
+    return isAtCharging;
+}
+
 bool VacuumCleaner::sensorWallN() const {
     Coordinates coordinates = currentLocation.getCoordinatesN();
     return house.isWall(coordinates);
-    //return house.isWall(currentLocation.getCoordinatesN());
 }
 
 bool VacuumCleaner::sensorWallE() const {
     Coordinates coordinates = currentLocation.getCoordinatesE();
     return house.isWall(coordinates);
-    //return house.isWall(currentLocation.getCoordinatesE());
 }
 
 bool VacuumCleaner::sensorWallS() const {
     Coordinates coordinates = currentLocation.getCoordinatesS();
     return house.isWall(coordinates);
-    //return house.isWall(currentLocation.getCoordinatesS());
 }
 
 bool VacuumCleaner::sensorWallW() const {
     Coordinates coordinates = currentLocation.getCoordinatesW();
     return house.isWall(coordinates);
-    //return house.isWall(currentLocation.getCoordinatesW());
 }
 
 int VacuumCleaner::dirtSensor() const {
