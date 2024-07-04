@@ -11,7 +11,7 @@
 class Algorithm {
 private:
     std::vector<char> directions = {'N', 'E', 'S', 'W'};
-    std::vector<std::string> actions = {"MOVE", "CLEAN", "CHARGE"};
+    std::vector<std::string> actions = {"MOVE", "CLEAN", "CHARGE", "FINISH"};
     bool isCargging = false;
     int moveCounter = 0;
     bool isReturningToDocking    = false;
@@ -19,7 +19,7 @@ private:
 
 public:
     Algorithm();
-    std::string chooseAction(const VacuumCleaner& cleaner);
+    std::string chooseAction(const VacuumCleaner& cleaner, int remainedDirt);
     char chooseDirection(const VacuumCleaner& cleaner);
     int calcDistanceFromDockingStation();
     void printQueue();

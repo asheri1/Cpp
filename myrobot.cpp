@@ -22,11 +22,20 @@ myrobot::myrobot(const FileParser& parser, House& house, VacuumCleaner& cleaner,
       remainedDirt(house.getTotalDirt()) {}
     
 
+int myrobot::getRemainedDirt(){
+    return remainedDirt;
+}
+
+
 void myrobot::run() {
     
+    int i = 0;
     while (remainedSteps > 0 && cleaner.getBatteryLevel() > 0) {   
-                
-        std::string action = algorithm.chooseAction(cleaner);
+        i++;
+        if(i % 150 == 0){
+            std::cout << "";    
+        }        
+        std::string action = algorithm.chooseAction(cleaner, remainedDirt);
         printLocation(cleaner.getCurrentLocation());
         std::cout << "action: " << action;
         
@@ -46,6 +55,9 @@ void myrobot::run() {
             cleaner.charge();
             outputer.logStep(action);
         }
+        else if (action == "FINISH") {
+            return;
+        }
 
         totalTakenSteps++;
         remainedSteps--;
@@ -54,6 +66,8 @@ void myrobot::run() {
         if(action != "MOVE"){ std::cout << std::endl;}
         if(action == "MOVE"){
             house.printLayout();
+            printLocation(cleaner.getCurrentLocation());
+            std::cout << std::endl;
             algorithm.printQueue();
             std::cout << "total Taken Steps = " << totalTakenSteps << std::endl;
             std::cout << "remained Steps = " << remainedSteps  << std::endl;
@@ -65,9 +79,6 @@ void myrobot::run() {
 }
 
 
-int myrobot::getRemainedDirt(){
-    return remainedDirt;
-}
 
 
 int main(int argc, char* argv[]) {
@@ -99,11 +110,10 @@ int main(int argc, char* argv[]) {
     return 0;
 }
 
-
+// for Debugging
 House myrobot::getHouse(){
     return house; 
 }
-
 
 void myrobot::printLayout(House house){
     return house.printLayout();

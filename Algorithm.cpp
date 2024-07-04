@@ -37,11 +37,20 @@ int Algorithm::calcDistanceFromDockingStation(){
     return pathToDocking.size();
 }
 
-//std::vector<std::string> actions = {"MOVE", "CLEAN", "CHARGE"};
-std::string Algorithm::chooseAction(const VacuumCleaner& cleaner) {
+//std::vector<std::string> actions = {"MOVE", "CLEAN", "CHARGE", "FINISH"};
+std::string Algorithm::chooseAction(const VacuumCleaner& cleaner, int remainedDirt) {
     
-    int distance_from_docking_station = calcDistanceFromDockingStation();
+    // the house is clean
+    if(remainedDirt == 0) {
+        isReturningToDocking = true;
+        if(cleaner.isAtDocking()){
+            return actions[3]; // FINISH
+        }
+        return actions[0]; // MOVE
+    }
 
+    int distance_from_docking_station = calcDistanceFromDockingStation();
+    
     if(cleaner.isAtDocking()){
         // if the robot finish charging
         if(cleaner.isCharged()) {
