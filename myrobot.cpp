@@ -48,18 +48,15 @@ void myrobot::run() {
             std::cout << ", direction: " << direction << std::endl;
             outputer.logStep(action, direction, cleaner);
             cleaner.move(direction);
-            //outputer.logStep(action, direction);
         }
         else if (action == "CLEAN") {
             cleaner.clean();
-            //outputer.logStep(action);
             outputer.logStep(action, 'N', cleaner);
             remainedDirt--;
         }
         else if (action == "CHARGE") {
             std::cout << ", battery Level = " << cleaner.getBatteryLevel();
             cleaner.charge();
-            //outputer.logStep(action);
             outputer.logStep(action, 'N', cleaner);
         }
         else if (action == "FINISH") {
@@ -110,7 +107,7 @@ int main(int argc, char* argv[]) {
         robot.run();
 
         // create output File
-        outputer.setVacuumStatus((cleaner.getBatteryLevel() <= 0), (house.getTotalDirt() == 0));
+        outputer.setVacuumStatus((cleaner.getBatteryLevel() <= 0), (house.getTotalDirt() == 0 && cleaner.isAtDocking()));
         outputer.writeOutput();
     } 
 
