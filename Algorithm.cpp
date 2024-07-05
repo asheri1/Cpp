@@ -94,13 +94,7 @@ std::string Algorithm::chooseAction(const VacuumCleaner& cleaner, int remainedDi
     }
 }
 
-// void printPossibleDirections(const std::vector<char>& directions) {
-//     std::cout << "possibleDirections: ";
-//     for (const char& direction : directions) {
-//         std::cout << direction << ' ';
-//     }
-//     std::cout << std::endl;
-// }
+
 
 //std::vector<char> directions = {'N', 'E', 'S', 'W'};
 char Algorithm::chooseDirection(const VacuumCleaner& cleaner) {
@@ -133,8 +127,6 @@ char Algorithm::chooseDirection(const VacuumCleaner& cleaner) {
 
     int randomIndex = distr(gen);
     char direction = possibleDirections[randomIndex];
-
-    //printPossibleDirections(possibleDirections);
 
     // Enter the opposite direction to the direction of progress to know how to return
     switch (direction) {
