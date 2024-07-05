@@ -8,7 +8,7 @@
             "name": "(gdb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/a.out",
+            "program": "${workspaceFolder}/myrobot",
             "args": ["input_files/house_input7.txt"],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",

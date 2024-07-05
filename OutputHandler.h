@@ -27,8 +27,8 @@ public:
 
     void logStep(const std::string& action, char direction, VacuumCleaner& cleaner);
     void logMoveStep(const std::string& action, char direction, const std::string& location);
-    void logCleanStep(const std::string& action, char direction, int totalDirt);
-    void logChargeStep(const std::string& action, char direction, int batteryLevel);
+    void logCleanStep(const std::string& action, int totalDirt);
+    void logChargeStep(const std::string& action, int batteryLevel);
     void lastUpdate(int totalTakenStpes, int totalRemainedDirt);
 
     void setRemainedDirt(int dirtLevel);

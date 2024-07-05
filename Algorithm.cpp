@@ -1,5 +1,6 @@
 #include "Algorithm.h"
 #include <time.h>
+#include <random>
 
 
 // Default constructor
@@ -93,6 +94,14 @@ std::string Algorithm::chooseAction(const VacuumCleaner& cleaner, int remainedDi
     }
 }
 
+// void printPossibleDirections(const std::vector<char>& directions) {
+//     std::cout << "possibleDirections: ";
+//     for (const char& direction : directions) {
+//         std::cout << direction << ' ';
+//     }
+//     std::cout << std::endl;
+// }
+
 //std::vector<char> directions = {'N', 'E', 'S', 'W'};
 char Algorithm::chooseDirection(const VacuumCleaner& cleaner) {
 
@@ -117,9 +126,15 @@ char Algorithm::chooseDirection(const VacuumCleaner& cleaner) {
     }
 
     // Choose a random direction from the possible directions
-    srand(static_cast<unsigned int>(time(0)));
-    int randomIndex = rand() % possibleDirections.size();
+    
+    std::random_device rd; // get a random number from the hardware
+    std::mt19937 gen(rd()); // seed a generator
+    std::uniform_int_distribution<> distr(0, possibleDirections.size() - 1); //define the range
+
+    int randomIndex = distr(gen);
     char direction = possibleDirections[randomIndex];
+
+    //printPossibleDirections(possibleDirections);
 
     // Enter the opposite direction to the direction of progress to know how to return
     switch (direction) {

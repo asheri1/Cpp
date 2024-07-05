@@ -46,11 +46,11 @@ void OutputHandler::logStep(const std::string& action, char direction, VacuumCle
     }
     else if(action == "CLEAN"){
         int totalDirt = cleaner.dirtSensor();
-        logCleanStep(action, direction, totalDirt);
+        logCleanStep(action, totalDirt);
     }
     else{ // (action == "CHARGE")
         int batteryLevel = cleaner.getBatteryLevel();
-        logChargeStep(action, direction, batteryLevel);
+        logChargeStep(action, batteryLevel);
     }
 }
 
@@ -58,11 +58,11 @@ void OutputHandler::logMoveStep(const std::string& action, char direction, const
     stepsLog.push_back(action + "\tfrom " + location + " to direction: " + direction);
 }
 
-void OutputHandler::logCleanStep(const std::string& action, char direction, int dirtLevel){
+void OutputHandler::logCleanStep(const std::string& action, int dirtLevel){
     stepsLog.push_back(action + "\tnew dirt Level = " + std::to_string(dirtLevel));
 }
 
-void OutputHandler::logChargeStep(const std::string& action, char direction, int batteryLevel){
+void OutputHandler::logChargeStep(const std::string& action, int batteryLevel){
     stepsLog.push_back(action + "\tbattery Level =  " + std::to_string(batteryLevel));
 }
 
