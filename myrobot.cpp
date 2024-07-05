@@ -22,6 +22,14 @@ myrobot::myrobot(const FileParser& parser, House& house, VacuumCleaner& cleaner,
       remainedDirt(house.getTotalDirt()) {}
     
 
+int myrobot::getTotalTakenSteps(){
+    return totalTakenSteps;
+}
+
+int myrobot::getRemainedSteps(){
+    return remainedSteps;
+}
+
 int myrobot::getRemainedDirt(){
     return remainedDirt;
 }
@@ -38,21 +46,24 @@ void myrobot::run() {
         if (action == "MOVE"){
             char direction = algorithm.chooseDirection(cleaner);
             std::cout << ", direction: " << direction << std::endl;
+            outputer.logStep(action, direction, cleaner);
             cleaner.move(direction);
-            outputer.logStep(action, direction);
+            //outputer.logStep(action, direction);
         }
         else if (action == "CLEAN") {
             cleaner.clean();
-            outputer.logStep(action);
+            //outputer.logStep(action);
+            outputer.logStep(action, 'N', cleaner);
             remainedDirt--;
         }
         else if (action == "CHARGE") {
             std::cout << ", battery Level = " << cleaner.getBatteryLevel();
             cleaner.charge();
-            outputer.logStep(action);
+            //outputer.logStep(action);
+            outputer.logStep(action, 'N', cleaner);
         }
         else if (action == "FINISH") {
-            return;
+            break;
         }
 
         totalTakenSteps++;
@@ -72,6 +83,7 @@ void myrobot::run() {
             std::cout << "distance from docking station = " << algorithm.calcDistanceFromDockingStation() << "\n" << std::endl;      
         }
     }
+    outputer.lastUpdate(totalTakenSteps, getRemainedDirt());
 }
 
 
@@ -96,12 +108,18 @@ int main(int argc, char* argv[]) {
         
         // Run the vacuum cleaner simulation
         robot.run();
+
+        // create output File
+        outputer.setVacuumStatus((cleaner.getBatteryLevel() <= 0), (house.getTotalDirt() == 0));
+        outputer.writeOutput();
     } 
 
     catch (const std::exception& ex) {
         std::cerr << "Error: " << ex.what() << std::endl;
         return 1;
     }
+
+
 
     return 0;
 }

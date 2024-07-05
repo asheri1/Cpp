@@ -1,6 +1,7 @@
 #ifndef OUTPUTHANDLER_H
 #define OUTPUTHANDLER_H
 
+#include "VacuumCleaner.h"
 #include <string>
 #include <vector>
 
@@ -21,8 +22,14 @@ public:
     OutputHandler(const std::string& filePath);
 
     // setters.
-    void logStep(const std::string& action);
-    void logStep(const std::string& action, char direction);
+    //void logStep(const std::string& action);
+    //void logStep(const std::string& action, char direction);
+
+    void logStep(const std::string& action, char direction, VacuumCleaner& cleaner);
+    void logMoveStep(const std::string& action, char direction, const std::string& location);
+    void logCleanStep(const std::string& action, char direction, int totalDirt);
+    void logChargeStep(const std::string& action, char direction, int batteryLevel);
+    void lastUpdate(int totalTakenStpes, int totalRemainedDirt);
 
     void setRemainedDirt(int dirtLevel);
     void setVacuumStatus(bool isDead, bool missionSucceeded);
