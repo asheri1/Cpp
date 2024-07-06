@@ -35,7 +35,7 @@ public:
     void setVacuumStatus(bool isDead, bool missionSucceeded);
      
     // write to file method.
-    void writeOutput() const;
+    void writeOutput(int batteryLevel, std::string outputFilePath) const;
 };
 
 #endif

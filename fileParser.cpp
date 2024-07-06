@@ -49,7 +49,7 @@ void FileParser::parseFile(const std::string& file_path) {
     {
         throw std::runtime_error("Docking station not found in house layout.");
     }
-
+    file.close();
 }
 
 // Helper functions for fillLayoutMissingWalls

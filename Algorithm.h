@@ -24,6 +24,7 @@ public:
     int calcDistanceFromDockingStation();
     void printQueue();
     int getQueueSize();
+    void emptyQueue();
 };
 
 #endif 

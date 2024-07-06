@@ -53,6 +53,9 @@ std::string Algorithm::chooseAction(const VacuumCleaner& cleaner, int remainedDi
     int distance_from_docking_station = calcDistanceFromDockingStation();
     
     if(cleaner.isAtDocking()){
+        // if get to the docking station (even accidentally), reset the route back
+        emptyQueue();
+
         // if the robot finish charging
         if(cleaner.isCharged()) {
             isCargging = false;
@@ -65,7 +68,7 @@ std::string Algorithm::chooseAction(const VacuumCleaner& cleaner, int remainedDi
             return actions[2]; // CHARGE
         }
         // There is still some battery left, so you don't have to charge it
-        if(cleaner.getBatteryLevel() > distance_from_docking_station + 5){
+        if(cleaner.getBatteryLevel() > distance_from_docking_station + 2){
             return actions[0]; // MOVE
         }
         // There is very little battery left so charge now
@@ -75,7 +78,7 @@ std::string Algorithm::chooseAction(const VacuumCleaner& cleaner, int remainedDi
         }
     }
 
-    // if the distance from the charging station is equal to the remaining battery + 2 steps - charge
+    // if the distance from the charging station is equal to the remaining battery + 1 or 2 steps - go charge
     else if((cleaner.getBatteryLevel() == distance_from_docking_station + 2) || 
             (cleaner.getBatteryLevel() == distance_from_docking_station + 1)) {
         isReturningToDocking = true;
@@ -87,7 +90,7 @@ std::string Algorithm::chooseAction(const VacuumCleaner& cleaner, int remainedDi
         if(cleaner.dirtSensor() > 0) {
             return actions[1]; // CLEAN
         }
-        // cleaner.dirtSensor() == 0
+        // this spot is clean - move
         else { 
             return actions[0]; // MOVE      
         }
@@ -144,6 +147,12 @@ char Algorithm::chooseDirection(const VacuumCleaner& cleaner) {
             break;
     }    
     return direction;
+}
+
+void Algorithm::emptyQueue(){
+    while (!pathToDocking.empty()) {
+        pathToDocking.pop();
+    }
 }
 
 void Algorithm::printQueue() {

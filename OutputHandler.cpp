@@ -82,7 +82,7 @@ void OutputHandler::setVacuumStatus(bool isDead, bool isMissionSucceeded) {
 }
 
 // write the output to file
-void OutputHandler::writeOutput() const {
+void OutputHandler::writeOutput(int batteryLevel, std::string outputFilePath) const {
     std::ofstream outFile(outputFilePath);
     if (!outFile) {
         std::cerr << "Error opening output file." << std::endl;
@@ -95,8 +95,20 @@ void OutputHandler::writeOutput() const {
 
     outFile << "Total Steps: " << totalSteps << std::endl;
     outFile << "Remaining Dirt: " << remainedDirt << std::endl;
-    outFile << "Vacuum is Dead: " << (isVacuumDead ? "Yes" : "No") << std::endl;
-    outFile << "Mission Succeeded: " << (missionSucceeded ? "Yes" : "No") << std::endl;
+    if(isVacuumDead) {
+        outFile << "Vacuum is Dead: Yes" << std::endl;
+    }
+    else {
+        outFile << "Vacuum is Dead: No\t (battery Level = "<< batteryLevel << ")" << std::endl;
+    }
+    if(missionSucceeded) {
+        outFile << "Mission Succeeded: Yes" << std::endl;
+    }
+    else {
+        outFile << "Mission Succeeded: No\t (Remaining Dirt = " << remainedDirt << ")" << std::endl;
+    }
+    //outFile << "Vacuum is Dead: " << (isVacuumDead ? "Yes" : "No") << std::endl;
+    //outFile << "Mission Succeeded: " << (missionSucceeded ? "Yes" : "No") << std::endl;
 
     outFile.close();
 }
