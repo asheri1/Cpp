@@ -25,18 +25,6 @@ OutputHandler::OutputHandler(const std::string& filePath)
 ///##########################///
 
 
-
-// logging a step.
-/*/
-void OutputHandler::logStep(const std::string& action) {
-    stepsLog.push_back(action);
-}
-
-void OutputHandler::logStep(const std::string& action, char direction){
-    stepsLog.push_back(action + " " + direction);
-}
-*/
-
 void OutputHandler::logStep(const std::string& action, char direction, VacuumCleaner& cleaner){
     
     if(action == "MOVE"){
@@ -107,8 +95,6 @@ void OutputHandler::writeOutput(int batteryLevel, std::string outputFilePath) co
     else {
         outFile << "Mission Succeeded: No\t (Remaining Dirt = " << remainedDirt << ")" << std::endl;
     }
-    //outFile << "Vacuum is Dead: " << (isVacuumDead ? "Yes" : "No") << std::endl;
-    //outFile << "Mission Succeeded: " << (missionSucceeded ? "Yes" : "No") << std::endl;
-
+    
     outFile.close();
 }

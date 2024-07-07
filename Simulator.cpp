@@ -1,15 +1,12 @@
 #include "Simulator.h"
-
 #include <iostream>
 #include <stdexcept>
 #include <string>
-
 #include <fstream>
 #include <vector>
 #include <filesystem>
 
 namespace fs = std::filesystem;
-
 
 
 void Simulator::printLocation(Coordinates currentLocation) {
@@ -45,12 +42,9 @@ void Simulator::run() {
     while (remainedSteps > 0 && cleaner.getBatteryLevel() > 0) {   
         
         std::string action = algorithm.chooseAction(cleaner, remainedDirt);
-        //printLocation(cleaner.getCurrentLocation());
-        //std::cout << "action: " << action;
         
         if (action == "MOVE"){
             char direction = algorithm.chooseDirection(cleaner);
-            //std::cout << ", direction: " << direction << std::endl;
             outputer.logStep(action, direction, cleaner);
             cleaner.move(direction);
         }
@@ -60,7 +54,6 @@ void Simulator::run() {
             remainedDirt--;
         }
         else if (action == "CHARGE") {
-            //std::cout << ", battery Level = " << cleaner.getBatteryLevel();
             cleaner.charge();
             outputer.logStep(action, 'N', cleaner);
         }
@@ -69,33 +62,20 @@ void Simulator::run() {
         }
 
         totalTakenSteps++;
-        remainedSteps--;
-        
-        /*/ Debugging
-        if(action != "MOVE"){ std::cout << std::endl;}
-        if(action == "MOVE"){
-            house.printLayout();
-            printLocation(cleaner.getCurrentLocation());
-            std::cout << std::endl;
-            algorithm.printQueue();
-            std::cout << "total Taken Steps = " << totalTakenSteps << std::endl;
-            std::cout << "remained Steps = " << remainedSteps  << std::endl;
-            std::cout << "battery Level = " << cleaner.getBatteryLevel() << std::endl;
-            std::cout << "remained Dirt; = " << getRemainedDirt() << std::endl;
-            std::cout << "distance from docking station = " << algorithm.calcDistanceFromDockingStation() << "\n" << std::endl;
-        }
-        */      
+        remainedSteps--;      
     }
     outputer.lastUpdate(totalTakenSteps, getRemainedDirt());
-}
 
-
-
-// for Debugging
-House Simulator::getHouse(){
-    return house; 
+    std::cout << "The house Layout after the cleaning of the robot is finished: " << std::endl;
+    printLayout(house);
+    std::cout << "\n" << std::endl;
 }
 
 void Simulator::printLayout(House house){
     return house.printLayout();
+}
+
+// for Debugging
+House Simulator::getHouse(){
+    return house; 
 }

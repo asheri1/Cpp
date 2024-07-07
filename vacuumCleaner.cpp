@@ -73,25 +73,21 @@ bool VacuumCleaner::isCharged() const{
 bool VacuumCleaner::sensorWallN() const {
     Coordinates coordinates = currentLocation.getCoordinatesN();
     return house.isWall(coordinates);
-    //return house.isWall(currentLocation.getCoordinatesN());
 }
 
 bool VacuumCleaner::sensorWallE() const {
     Coordinates coordinates = currentLocation.getCoordinatesE();
     return house.isWall(coordinates);
-    //return house.isWall(currentLocation.getCoordinatesE());
 }
 
 bool VacuumCleaner::sensorWallS() const {
     Coordinates coordinates = currentLocation.getCoordinatesS();
     return house.isWall(coordinates);
-    //return house.isWall(currentLocation.getCoordinatesS());
 }
 
 bool VacuumCleaner::sensorWallW() const {
     Coordinates coordinates = currentLocation.getCoordinatesW();
     return house.isWall(coordinates);
-    //return house.isWall(currentLocation.getCoordinatesW());
 }
 
 int VacuumCleaner::dirtSensor() const {

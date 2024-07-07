@@ -8,7 +8,6 @@ House::House(const FileParser& parser)
       totalDirt(0)
       {calculateTotalDirt();}
 
-
 void House::calculateTotalDirt(){
     for (const auto& row : houseLayout) {
         for (const auto& cellDirt : row) {
@@ -20,7 +19,6 @@ void House::calculateTotalDirt(){
 }
 
 bool House::isWall(const Coordinates& co) const {
-    //std::cout << "isWall: houseLayout[" << co.getX() << "][" << co.getY() <<  "] = " << houseLayout[co.getY()][co.getX()] << std::endl;
     return houseLayout[co.getY()][co.getX()] == '#';
 }
 
@@ -63,4 +61,6 @@ void House::printLayout() {
     }
 }
 
-char House::getLayoutChar(int x, int y) {return houseLayout[y][x];}
+char House::getLayoutChar(int x, int y) {
+    return houseLayout[y][x];
+}

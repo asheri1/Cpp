@@ -98,7 +98,6 @@ std::string Algorithm::chooseAction(const VacuumCleaner& cleaner, int remainedDi
 }
 
 
-
 //std::vector<char> directions = {'N', 'E', 'S', 'W'};
 char Algorithm::chooseDirection(const VacuumCleaner& cleaner) {
 
@@ -107,8 +106,7 @@ char Algorithm::chooseDirection(const VacuumCleaner& cleaner) {
             char dirction = pathToDocking.top();
             pathToDocking.pop(); 
             return dirction;
-        }
-        //return 'D'; 
+        } 
     }
     
     std::vector<char> possibleDirections;
@@ -123,7 +121,6 @@ char Algorithm::chooseDirection(const VacuumCleaner& cleaner) {
     }
 
     // Choose a random direction from the possible directions
-    
     std::random_device rd; // get a random number from the hardware
     std::mt19937 gen(rd()); // seed a generator
     std::uniform_int_distribution<> distr(0, possibleDirections.size() - 1); //define the range
