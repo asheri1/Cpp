@@ -32,7 +32,7 @@ void FileParser::parseFile(const std::string& file_path) {
             } else {
                 std::vector<char> fixLine = std::vector<char>(line.begin(), line.end());
                 lineFixer(fixLine);
-                if(fixLine.empty()){
+                if(fixLine[0] == '\r' || fixLine.empty() == '\r'){
                     continue;
                 }
                 layout.push_back(fixLine);
@@ -49,7 +49,7 @@ void FileParser::parseFile(const std::string& file_path) {
             if (!batteryCapacitySet && !maxStepsSet) {
                 std::vector<char> row = std::vector<char>(line.begin(), line.end());
                 lineFixer(row);
-                if(row.empty()){
+                if(row[0] == '\r' || row.empty()){
                     continue;
                 }
                 layout.push_back(row);
@@ -96,7 +96,10 @@ void FileParser::parseFile(const std::string& file_path) {
 
 void FileParser::lineFixer(std::vector<char>& line) {
     for (char& ch : line) {
-        if (!(ch >= '0' && ch <= '9') && ch != '@' && ch != '#') {
+        if (ch == '\r') {
+            break; // Linux equal to '\0'
+        }
+        if (!(ch >= '0' && ch <= '9') && ch != '@' && ch != '#' && ch != ' ') {
             ch = '0';
         }
     }
