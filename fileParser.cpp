@@ -30,25 +30,28 @@ void FileParser::parseFile(const std::string& file_path) {
                 maxStepsSet = true;
                 maxStepsAllowed = std::stoi(line.substr(line.find('=') + 1));
             } else {
-                layout.push_back(std::vector<char>(line.begin(), line.end()));
+                std::vector<char> fixLine = std::vector<char>(line.begin(), line.end());
+                lineFixer(fixLine);
+                if(fixLine.empty()){
+                    continue;
+                }
+                layout.push_back(fixLine);
             }
-        } catch (const std::exception& e) {
+        } 
+        catch (const std::exception& e) {
             std::cout << "Error: " << e.what() << std::endl;
-            if (batteryCapacitySet)
-            {
+            if (batteryCapacitySet) {
                 std::cout << "batteryCapacity - invalid value is provided, default value set to 100." << std::endl;
             }
-
-            if (maxStepsSet)
-            {
+            if (maxStepsSet) {
                 std::cout << "maxSteps - invalid value is provided, default value set to 1000." << std::endl;
-            }
-            
-            
-            if (!batteryCapacitySet && !maxStepsSet)
-            {
+            }    
+            if (!batteryCapacitySet && !maxStepsSet) {
                 std::vector<char> row = std::vector<char>(line.begin(), line.end());
                 lineFixer(row);
+                if(row.empty()){
+                    continue;
+                }
                 layout.push_back(row);
             }
         }
