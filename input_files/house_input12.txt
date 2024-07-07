@@ -1,9 +1,12 @@
-batteryCapacity= 400
+batteryCapacity= 100
+maxSteps= 1000
+maxSteps= 1000
 #12345
 12345#
 #12345
 12345#
 #12345
+
 12345#
 #12345
 12345#

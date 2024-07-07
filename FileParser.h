@@ -23,6 +23,7 @@ private:
     void cleanLayout();
     void cleanUnnecessaryWalls();
     void fillLayoutMissingWalls();
+    void lineFixer(std::vector<char>& line);
 
 public:
     

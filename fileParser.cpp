@@ -14,28 +14,55 @@ void FileParser::parseFile(const std::string& file_path) {
     }
 
     std::string line;
+    batteryCapacity = 100; // default values.
+    maxStepsAllowed = 1000;
+
+    bool batteryCapacitySet = false;
+    bool maxStepsSet = false;
 
     // read batteryCapacity and maxStepsAllowed
-    int i = 0;
-    while (i < 2 && std::getline(file, line)) {
-        i++;
+    while (std::getline(file, line)) {
         try {
             if (line.find("batteryCapacity=") != std::string::npos) {
+                batteryCapacitySet = true;
                 batteryCapacity = std::stoi(line.substr(line.find('=') + 1));
             } else if (line.find("maxSteps=") != std::string::npos) {
+                maxStepsSet = true;
                 maxStepsAllowed = std::stoi(line.substr(line.find('=') + 1));
             } else {
-                throw std::runtime_error("Invalid format for parameters.");
+                layout.push_back(std::vector<char>(line.begin(), line.end()));
             }
         } catch (const std::exception& e) {
-            std::cerr << "Error: " << e.what() << std::endl;
+            std::cout << "Error: " << e.what() << std::endl;
+            if (batteryCapacitySet)
+            {
+                std::cout << "batteryCapacity - invalid value is provided, default value set to 100." << std::endl;
+            }
+
+            if (maxStepsSet)
+            {
+                std::cout << "maxSteps - invalid value is provided, default value set to 1000." << std::endl;
+            }
+            
+            
+            if (!batteryCapacitySet && !maxStepsSet)
+            {
+                std::vector<char> row = std::vector<char>(line.begin(), line.end());
+                lineFixer(row);
+                layout.push_back(row);
+            }
         }
     }
-    
-    while (std::getline(file ,line)){
-        std::vector<char> row = std::vector<char>(line.begin(), line.end());
-        layout.push_back(row);
+
+    if (!batteryCapacitySet) {
+        std::cout << "batteryCapacity isn't provided, default value set to 100." << std::endl;
     }
+
+    if (!maxStepsSet) {
+        std::cout << "maxSteps isn't provided, default value set to 1000." << std::endl;
+    }
+
+    
 
     std::cout << "layout before fillLayoutMissingWalls: " << std::endl;
     printLayout();
@@ -61,6 +88,15 @@ void FileParser::parseFile(const std::string& file_path) {
         throw std::runtime_error("Docking station not found in house layout.");
     }
     file.close();
+}
+
+
+void FileParser::lineFixer(std::vector<char>& line) {
+    for (char& ch : line) {
+        if (!(ch >= '0' && ch <= '9') && ch != '@' && ch != '#') {
+            ch = '0';
+        }
+    }
 }
 
 // Helper functions for fillLayoutMissingWalls

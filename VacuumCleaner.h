@@ -26,11 +26,9 @@ public:
     Coordinates getCurrentLocation() const;
     int getBatteryLevel() const;
     int getBatteryCapacity() const;
-    //int getMaxStepsAllowed() const;
     bool isAtDocking() const;
     bool isCharged() const;
     
-
     bool sensorWallN() const;
     bool sensorWallE() const;
     bool sensorWallS() const;

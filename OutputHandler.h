@@ -22,9 +22,6 @@ public:
     OutputHandler(const std::string& filePath);
 
     // setters.
-    //void logStep(const std::string& action);
-    //void logStep(const std::string& action, char direction);
-
     void logStep(const std::string& action, char direction, VacuumCleaner& cleaner);
     void logMoveStep(const std::string& action, char direction, const std::string& location);
     void logCleanStep(const std::string& action, int totalDirt);
