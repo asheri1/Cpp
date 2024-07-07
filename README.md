@@ -1,6 +1,6 @@
 # Vacuum Cleaner Robot Project
 
-## submitters
+## Contributers
 
 - Or Asheri
 - Tomer Yihya
@@ -88,9 +88,11 @@ The program generates an output file which has the following data:
 
 1. All of the steps which were performed.
    for example:
-   ``MOVE	  from Latout[3][8] to direction: N``
-   ``CLEAN	  new dirt Level = 0``
-   ``CHARGE  battery Level =  7``
+   ```
+   MOVE	  from Latout[3][8] to direction: N
+   CLEAN	  new dirt Level = 0
+   CHARGE  battery Level =  7
+   ```
 2. Total Steps.
 3. Remaining Dirt.
 4. Vacuum is Dead.
