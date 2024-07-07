@@ -13,6 +13,11 @@ void FileParser::parseFile(const std::string& file_path) {
         throw std::runtime_error("Failed to open the input file.");
     }
 
+    // Check if the file is empty
+    if (file.peek() == std::ifstream::traits_type::eof()) {
+        throw std::runtime_error("The input file is empty.");
+    }
+
     std::string line;
     batteryCapacity = 100; // default values.
     maxStepsAllowed = 1000;
