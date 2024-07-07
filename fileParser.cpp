@@ -56,23 +56,18 @@ void FileParser::parseFile(const std::string& file_path) {
             }
         }
     }
-
     if (!batteryCapacitySet) {
         std::cout << "batteryCapacity isn't provided, default value set to 100." << std::endl;
     }
-
     if (!maxStepsSet) {
         std::cout << "maxSteps isn't provided, default value set to 1000." << std::endl;
     }
-
     
-
-    std::cout << "layout before fillLayoutMissingWalls: " << std::endl;
-    printLayout();
-    std::cout << "layout after fillLayoutMissingWalls: " << std::endl;
     fillLayoutMissingWalls();
+    std::cout << "House Layout before the robot start cleaning: " << std::endl;
     printLayout();
     std::cout << "\n" << std::endl;
+
     // find the docking station coordinates by '@' character in the houseLayout.
     bool found_docking = false;
 

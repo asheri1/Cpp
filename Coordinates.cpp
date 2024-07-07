@@ -22,7 +22,6 @@ Coordinates Coordinates::getCoordinatesW() const{
     return Coordinates(xValue-1, yValue);
 }
 
-
 // equality operator
 bool Coordinates::operator==(const Coordinates& other) const {
     return (xValue == other.getX() && yValue == other.getY());
