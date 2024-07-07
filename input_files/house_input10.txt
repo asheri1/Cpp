@@ -1,5 +1,5 @@
-100
-300
+batteryCapacity= 500
+maxSteps= 3000
 1
 12
 123

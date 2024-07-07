@@ -6,7 +6,7 @@ CXXFLAGS = -std=c++20 -Wall -Wextra -Werror -pedantic
 TARGET = myrobot
 
 # Source files
-SRCS = myrobot.cpp Coordinates.cpp FileParser.cpp House.cpp VacuumCleaner.cpp Algorithm.cpp OutputHandler.cpp
+SRCS = main.cpp Simulator.cpp Coordinates.cpp FileParser.cpp House.cpp VacuumCleaner.cpp Algorithm.cpp OutputHandler.cpp
 
 # Default rule
 all: $(TARGET)

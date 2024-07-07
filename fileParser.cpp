@@ -15,11 +15,21 @@ void FileParser::parseFile(const std::string& file_path) {
 
     std::string line;
 
-    std::getline(file, line); 
-    batteryCapacity = std::stoi(line); // read the first line - for battery capacity.
+    // read batteryCapacity and maxStepsAllowed
+    std::getline(file, line); // read the first line - for battery capacity.
+    if (line.find("batteryCapacity=") != std::string::npos) {
+        batteryCapacity = std::stoi(line.substr(line.find('=') + 1));
+    } else {
+        throw std::runtime_error("Invalid format for batteryCapacity.");
+    }
 
-    std::getline(file, line);
-    maxStepsAllowed = std::stoi(line); // read the second line - for max steps allowed.
+    std::getline(file, line);    // read the second line - for max steps allowed.
+    if (line.find("maxSteps=") != std::string::npos) {
+        maxStepsAllowed = std::stoi(line.substr(line.find('=') + 1));
+    } else {
+        throw std::runtime_error("Invalid format for maxSteps.");
+    }
+
 
     while (std::getline(file ,line)){
         std::vector<char> row = std::vector<char>(line.begin(), line.end());
