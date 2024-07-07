@@ -16,21 +16,22 @@ void FileParser::parseFile(const std::string& file_path) {
     std::string line;
 
     // read batteryCapacity and maxStepsAllowed
-    std::getline(file, line); // read the first line - for battery capacity.
-    if (line.find("batteryCapacity=") != std::string::npos) {
-        batteryCapacity = std::stoi(line.substr(line.find('=') + 1));
-    } else {
-        throw std::runtime_error("Invalid format for batteryCapacity.");
+    int i = 0;
+    while (i < 2 && std::getline(file, line)) {
+        i++;
+        try {
+            if (line.find("batteryCapacity=") != std::string::npos) {
+                batteryCapacity = std::stoi(line.substr(line.find('=') + 1));
+            } else if (line.find("maxSteps=") != std::string::npos) {
+                maxStepsAllowed = std::stoi(line.substr(line.find('=') + 1));
+            } else {
+                throw std::runtime_error("Invalid format for parameters.");
+            }
+        } catch (const std::exception& e) {
+            std::cerr << "Error: " << e.what() << std::endl;
+        }
     }
-
-    std::getline(file, line);    // read the second line - for max steps allowed.
-    if (line.find("maxSteps=") != std::string::npos) {
-        maxStepsAllowed = std::stoi(line.substr(line.find('=') + 1));
-    } else {
-        throw std::runtime_error("Invalid format for maxSteps.");
-    }
-
-
+    
     while (std::getline(file ,line)){
         std::vector<char> row = std::vector<char>(line.begin(), line.end());
         layout.push_back(row);
