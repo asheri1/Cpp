@@ -1,35 +1,3 @@
-MOVE	from Latout[4][9] to direction: S
-CLEAN	new dirt Level = 3
-CLEAN	new dirt Level = 2
-CLEAN	new dirt Level = 1
-CLEAN	new dirt Level = 0
-MOVE	from Latout[4][10] to direction: S
-CLEAN	new dirt Level = 3
-CLEAN	new dirt Level = 2
-CLEAN	new dirt Level = 1
-CLEAN	new dirt Level = 0
-MOVE	from Latout[4][11] to direction: E
-CLEAN	new dirt Level = 4
-CLEAN	new dirt Level = 3
-CLEAN	new dirt Level = 2
-CLEAN	new dirt Level = 1
-CLEAN	new dirt Level = 0
-MOVE	from Latout[5][11] to direction: W
-MOVE	from Latout[4][11] to direction: W
-CLEAN	new dirt Level = 2
-CLEAN	new dirt Level = 1
-CLEAN	new dirt Level = 0
-MOVE	from Latout[3][11] to direction: N
-CLEAN	new dirt Level = 2
-CLEAN	new dirt Level = 1
-CLEAN	new dirt Level = 0
-MOVE	from Latout[3][10] to direction: S
-MOVE	from Latout[3][11] to direction: W
-CLEAN	new dirt Level = 1
-CLEAN	new dirt Level = 0
-MOVE	from Latout[2][11] to direction: E
-MOVE	from Latout[3][11] to direction: E
-MOVE	from Latout[4][11] to direction: N
 MOVE	from Latout[4][10] to direction: E
 CLEAN	new dirt Level = 4
 CLEAN	new dirt Level = 3
@@ -37,68 +5,1000 @@ CLEAN	new dirt Level = 2
 CLEAN	new dirt Level = 1
 CLEAN	new dirt Level = 0
 MOVE	from Latout[5][10] to direction: S
-MOVE	from Latout[5][11] to direction: W
-MOVE	from Latout[4][11] to direction: E
-MOVE	from Latout[5][11] to direction: N
-MOVE	from Latout[5][10] to direction: W
-MOVE	from Latout[4][10] to direction: S
-MOVE	from Latout[4][11] to direction: E
-MOVE	from Latout[5][11] to direction: N
-MOVE	from Latout[5][10] to direction: S
-MOVE	from Latout[5][11] to direction: N
-MOVE	from Latout[5][10] to direction: N
 CLEAN	new dirt Level = 4
 CLEAN	new dirt Level = 3
 CLEAN	new dirt Level = 2
 CLEAN	new dirt Level = 1
 CLEAN	new dirt Level = 0
+MOVE	from Latout[5][11] to direction: S
+CLEAN	new dirt Level = 4
+CLEAN	new dirt Level = 3
+CLEAN	new dirt Level = 2
+CLEAN	new dirt Level = 1
+CLEAN	new dirt Level = 0
+MOVE	from Latout[5][12] to direction: N
+MOVE	from Latout[5][11] to direction: N
+MOVE	from Latout[5][10] to direction: W
+MOVE	from Latout[4][10] to direction: S
+CLEAN	new dirt Level = 3
+CLEAN	new dirt Level = 2
+CLEAN	new dirt Level = 1
+CLEAN	new dirt Level = 0
+MOVE	from Latout[4][11] to direction: N
+MOVE	from Latout[4][10] to direction: E
+MOVE	from Latout[5][10] to direction: N
+MOVE	from Latout[5][9] to direction: N
+CLEAN	new dirt Level = 4
+CLEAN	new dirt Level = 3
+CLEAN	new dirt Level = 2
+CLEAN	new dirt Level = 1
+CLEAN	new dirt Level = 0
+MOVE	from Latout[5][8] to direction: N
+CLEAN	new dirt Level = 4
+CLEAN	new dirt Level = 3
+CLEAN	new dirt Level = 2
+CLEAN	new dirt Level = 1
+CLEAN	new dirt Level = 0
+MOVE	from Latout[5][7] to direction: W
+CLEAN	new dirt Level = 3
+CLEAN	new dirt Level = 2
+CLEAN	new dirt Level = 1
+CLEAN	new dirt Level = 0
+MOVE	from Latout[4][7] to direction: S
+CLEAN	new dirt Level = 3
+CLEAN	new dirt Level = 2
+CLEAN	new dirt Level = 1
+CLEAN	new dirt Level = 0
+MOVE	from Latout[4][8] to direction: W
+CLEAN	new dirt Level = 2
+CLEAN	new dirt Level = 1
+CLEAN	new dirt Level = 0
+MOVE	from Latout[3][8] to direction: N
+CLEAN	new dirt Level = 2
+CLEAN	new dirt Level = 1
+CLEAN	new dirt Level = 0
+MOVE	from Latout[3][7] to direction: W
+CLEAN	new dirt Level = 1
+CLEAN	new dirt Level = 0
+MOVE	from Latout[2][7] to direction: E
+MOVE	from Latout[3][7] to direction: W
+MOVE	from Latout[2][7] to direction: E
+MOVE	from Latout[3][7] to direction: E
+MOVE	from Latout[4][7] to direction: S
+MOVE	from Latout[4][8] to direction: E
+MOVE	from Latout[5][8] to direction: N
+MOVE	from Latout[5][7] to direction: S
+MOVE	from Latout[5][8] to direction: S
+MOVE	from Latout[5][9] to direction: W
+MOVE	from Latout[4][9] to direction: W
+MOVE	from Latout[3][9] to direction: N
+MOVE	from Latout[3][8] to direction: W
+CLEAN	new dirt Level = 1
+CLEAN	new dirt Level = 0
+MOVE	from Latout[2][8] to direction: W
+CLEAN	new dirt Level = 0
+MOVE	from Latout[1][8] to direction: E
+MOVE	from Latout[2][8] to direction: N
+MOVE	from Latout[2][7] to direction: S
+MOVE	from Latout[2][8] to direction: E
+MOVE	from Latout[3][8] to direction: S
+MOVE	from Latout[3][9] to direction: E
+MOVE	from Latout[4][9] to direction: E
+MOVE	from Latout[5][9] to direction: N
+MOVE	from Latout[5][8] to direction: W
+MOVE	from Latout[4][8] to direction: N
+MOVE	from Latout[4][7] to direction: W
+MOVE	from Latout[3][7] to direction: S
+MOVE	from Latout[3][8] to direction: E
+MOVE	from Latout[4][8] to direction: N
+MOVE	from Latout[4][7] to direction: E
+MOVE	from Latout[5][7] to direction: S
+MOVE	from Latout[5][8] to direction: S
 MOVE	from Latout[5][9] to direction: S
-MOVE	from Latout[5][10] to direction: S
-MOVE	from Latout[5][11] to direction: N
-MOVE	from Latout[5][10] to direction: S
-MOVE	from Latout[5][11] to direction: N
+MOVE	from Latout[5][10] to direction: W
+CHARGE	battery Level =  7
+CHARGE	battery Level =  12
+CHARGE	battery Level =  17
+CHARGE	battery Level =  22
+CHARGE	battery Level =  27
+CHARGE	battery Level =  32
+CHARGE	battery Level =  37
+CHARGE	battery Level =  42
+CHARGE	battery Level =  47
+CHARGE	battery Level =  52
+CHARGE	battery Level =  57
+CHARGE	battery Level =  62
+CHARGE	battery Level =  67
+CHARGE	battery Level =  72
+CHARGE	battery Level =  77
+CHARGE	battery Level =  82
+CHARGE	battery Level =  87
+CHARGE	battery Level =  92
+CHARGE	battery Level =  97
+CHARGE	battery Level =  100
+MOVE	from Latout[4][10] to direction: N
+MOVE	from Latout[4][9] to direction: W
+MOVE	from Latout[3][9] to direction: S
+CLEAN	new dirt Level = 2
+CLEAN	new dirt Level = 1
+CLEAN	new dirt Level = 0
+MOVE	from Latout[3][10] to direction: W
+CLEAN	new dirt Level = 1
+CLEAN	new dirt Level = 0
+MOVE	from Latout[2][10] to direction: W
+CLEAN	new dirt Level = 0
+MOVE	from Latout[1][10] to direction: E
+MOVE	from Latout[2][10] to direction: N
+MOVE	from Latout[2][9] to direction: W
+MOVE	from Latout[1][9] to direction: N
+MOVE	from Latout[1][8] to direction: S
+MOVE	from Latout[1][9] to direction: E
+MOVE	from Latout[2][9] to direction: N
+MOVE	from Latout[2][8] to direction: E
+MOVE	from Latout[3][8] to direction: N
+MOVE	from Latout[3][7] to direction: W
+MOVE	from Latout[2][7] to direction: N
+CLEAN	new dirt Level = 1
+CLEAN	new dirt Level = 0
+MOVE	from Latout[2][6] to direction: E
+CLEAN	new dirt Level = 2
+CLEAN	new dirt Level = 1
+CLEAN	new dirt Level = 0
+MOVE	from Latout[3][6] to direction: N
+CLEAN	new dirt Level = 2
+CLEAN	new dirt Level = 1
+CLEAN	new dirt Level = 0
+MOVE	from Latout[3][5] to direction: S
+MOVE	from Latout[3][6] to direction: S
+MOVE	from Latout[3][7] to direction: S
+MOVE	from Latout[3][8] to direction: N
+MOVE	from Latout[3][7] to direction: E
+MOVE	from Latout[4][7] to direction: N
+CLEAN	new dirt Level = 3
+CLEAN	new dirt Level = 2
+CLEAN	new dirt Level = 1
+CLEAN	new dirt Level = 0
+MOVE	from Latout[4][6] to direction: E
+CLEAN	new dirt Level = 4
+CLEAN	new dirt Level = 3
+CLEAN	new dirt Level = 2
+CLEAN	new dirt Level = 1
+CLEAN	new dirt Level = 0
+MOVE	from Latout[5][6] to direction: S
+MOVE	from Latout[5][7] to direction: S
+MOVE	from Latout[5][8] to direction: S
+MOVE	from Latout[5][9] to direction: S
 MOVE	from Latout[5][10] to direction: N
 MOVE	from Latout[5][9] to direction: W
 MOVE	from Latout[4][9] to direction: E
 MOVE	from Latout[5][9] to direction: W
+MOVE	from Latout[4][9] to direction: N
+MOVE	from Latout[4][8] to direction: E
+MOVE	from Latout[5][8] to direction: N
+MOVE	from Latout[5][7] to direction: W
+MOVE	from Latout[4][7] to direction: S
+MOVE	from Latout[4][8] to direction: N
+MOVE	from Latout[4][7] to direction: S
+MOVE	from Latout[4][8] to direction: W
+MOVE	from Latout[3][8] to direction: S
+MOVE	from Latout[3][9] to direction: E
+MOVE	from Latout[4][9] to direction: W
+MOVE	from Latout[3][9] to direction: E
+MOVE	from Latout[4][9] to direction: N
+MOVE	from Latout[4][8] to direction: W
+MOVE	from Latout[3][8] to direction: E
+MOVE	from Latout[4][8] to direction: S
+MOVE	from Latout[4][9] to direction: W
+MOVE	from Latout[3][9] to direction: N
+MOVE	from Latout[3][8] to direction: E
+MOVE	from Latout[4][8] to direction: N
+MOVE	from Latout[4][7] to direction: E
+MOVE	from Latout[5][7] to direction: S
+MOVE	from Latout[5][8] to direction: W
+MOVE	from Latout[4][8] to direction: S
+MOVE	from Latout[4][9] to direction: E
+MOVE	from Latout[5][9] to direction: N
+MOVE	from Latout[5][8] to direction: N
+MOVE	from Latout[5][7] to direction: N
+MOVE	from Latout[5][6] to direction: W
+MOVE	from Latout[4][6] to direction: S
+MOVE	from Latout[4][7] to direction: W
+MOVE	from Latout[3][7] to direction: N
+MOVE	from Latout[3][6] to direction: W
+MOVE	from Latout[2][6] to direction: S
+MOVE	from Latout[2][7] to direction: E
+MOVE	from Latout[3][7] to direction: S
+MOVE	from Latout[3][8] to direction: W
+MOVE	from Latout[2][8] to direction: S
+MOVE	from Latout[2][9] to direction: S
+MOVE	from Latout[2][10] to direction: E
+MOVE	from Latout[3][10] to direction: N
+MOVE	from Latout[3][9] to direction: E
 MOVE	from Latout[4][9] to direction: S
-MOVE	from Latout[4][10] to direction: E
-MOVE	from Latout[5][10] to direction: N
-MOVE	from Latout[5][9] to direction: S
-MOVE	from Latout[5][10] to direction: S
-MOVE	from Latout[5][11] to direction: W
-MOVE	from Latout[4][11] to direction: W
+CHARGE	battery Level =  6
+CHARGE	battery Level =  11
+CHARGE	battery Level =  16
+CHARGE	battery Level =  21
+CHARGE	battery Level =  26
+CHARGE	battery Level =  31
+CHARGE	battery Level =  36
+CHARGE	battery Level =  41
+CHARGE	battery Level =  46
+CHARGE	battery Level =  51
+CHARGE	battery Level =  56
+CHARGE	battery Level =  61
+CHARGE	battery Level =  66
+CHARGE	battery Level =  71
+CHARGE	battery Level =  76
+CHARGE	battery Level =  81
+CHARGE	battery Level =  86
+CHARGE	battery Level =  91
+CHARGE	battery Level =  96
+CHARGE	battery Level =  100
+MOVE	from Latout[4][10] to direction: W
+MOVE	from Latout[3][10] to direction: S
+CLEAN	new dirt Level = 2
+CLEAN	new dirt Level = 1
+CLEAN	new dirt Level = 0
+MOVE	from Latout[3][11] to direction: N
+MOVE	from Latout[3][10] to direction: N
+MOVE	from Latout[3][9] to direction: S
+MOVE	from Latout[3][10] to direction: S
+MOVE	from Latout[3][11] to direction: N
+MOVE	from Latout[3][10] to direction: S
+MOVE	from Latout[3][11] to direction: W
+CLEAN	new dirt Level = 1
+CLEAN	new dirt Level = 0
+MOVE	from Latout[2][11] to direction: W
+CLEAN	new dirt Level = 0
+MOVE	from Latout[1][11] to direction: E
+MOVE	from Latout[2][11] to direction: E
 MOVE	from Latout[3][11] to direction: E
 MOVE	from Latout[4][11] to direction: N
-MOVE	from Latout[4][10] to direction: W
-MOVE	from Latout[3][10] to direction: W
+MOVE	from Latout[4][10] to direction: E
+MOVE	from Latout[5][10] to direction: S
+MOVE	from Latout[5][11] to direction: S
+MOVE	from Latout[5][12] to direction: W
+CLEAN	new dirt Level = 3
+CLEAN	new dirt Level = 2
 CLEAN	new dirt Level = 1
 CLEAN	new dirt Level = 0
-MOVE	from Latout[2][10] to direction: N
+MOVE	from Latout[4][12] to direction: N
+MOVE	from Latout[4][11] to direction: W
+MOVE	from Latout[3][11] to direction: S
+CLEAN	new dirt Level = 2
 CLEAN	new dirt Level = 1
 CLEAN	new dirt Level = 0
-MOVE	from Latout[2][9] to direction: W
+MOVE	from Latout[3][12] to direction: W
+CLEAN	new dirt Level = 1
 CLEAN	new dirt Level = 0
-MOVE	from Latout[1][9] to direction: S
+MOVE	from Latout[2][12] to direction: W
 CLEAN	new dirt Level = 0
-MOVE	from Latout[1][10] to direction: S
-CLEAN	new dirt Level = 0
-MOVE	from Latout[1][11] to direction: N
-MOVE	from Latout[1][10] to direction: S
-MOVE	from Latout[1][11] to direction: N
-MOVE	from Latout[1][10] to direction: N
-MOVE	from Latout[1][9] to direction: E
-MOVE	from Latout[2][9] to direction: S
-MOVE	from Latout[2][10] to direction: S
-MOVE	from Latout[2][11] to direction: W
-MOVE	from Latout[1][11] to direction: E
-MOVE	from Latout[2][11] to direction: W
+MOVE	from Latout[1][12] to direction: N
+MOVE	from Latout[1][11] to direction: S
+MOVE	from Latout[1][12] to direction: N
 MOVE	from Latout[1][11] to direction: N
 MOVE	from Latout[1][10] to direction: E
 MOVE	from Latout[2][10] to direction: S
+MOVE	from Latout[2][11] to direction: N
+MOVE	from Latout[2][10] to direction: W
+MOVE	from Latout[1][10] to direction: N
+MOVE	from Latout[1][9] to direction: N
+MOVE	from Latout[1][8] to direction: S
+MOVE	from Latout[1][9] to direction: N
+MOVE	from Latout[1][8] to direction: E
+MOVE	from Latout[2][8] to direction: S
+MOVE	from Latout[2][9] to direction: N
+MOVE	from Latout[2][8] to direction: W
+MOVE	from Latout[1][8] to direction: E
+MOVE	from Latout[2][8] to direction: W
+MOVE	from Latout[1][8] to direction: N
+CLEAN	new dirt Level = 0
+MOVE	from Latout[1][7] to direction: N
+CLEAN	new dirt Level = 0
+MOVE	from Latout[1][6] to direction: S
+MOVE	from Latout[1][7] to direction: N
+MOVE	from Latout[1][6] to direction: E
+MOVE	from Latout[2][6] to direction: S
+MOVE	from Latout[2][7] to direction: E
+MOVE	from Latout[3][7] to direction: W
+MOVE	from Latout[2][7] to direction: N
+MOVE	from Latout[2][6] to direction: S
+MOVE	from Latout[2][7] to direction: W
+MOVE	from Latout[1][7] to direction: N
+MOVE	from Latout[1][6] to direction: E
+MOVE	from Latout[2][6] to direction: W
+MOVE	from Latout[1][6] to direction: E
+MOVE	from Latout[2][6] to direction: N
+CLEAN	new dirt Level = 1
+CLEAN	new dirt Level = 0
+MOVE	from Latout[2][5] to direction: S
+MOVE	from Latout[2][6] to direction: W
+MOVE	from Latout[1][6] to direction: S
+MOVE	from Latout[1][7] to direction: E
+MOVE	from Latout[2][7] to direction: N
+MOVE	from Latout[2][6] to direction: W
+MOVE	from Latout[1][6] to direction: S
+MOVE	from Latout[1][7] to direction: S
+MOVE	from Latout[1][8] to direction: S
+MOVE	from Latout[1][9] to direction: S
+MOVE	from Latout[1][10] to direction: S
+MOVE	from Latout[1][11] to direction: S
+MOVE	from Latout[1][12] to direction: E
+MOVE	from Latout[2][12] to direction: E
+MOVE	from Latout[3][12] to direction: N
+MOVE	from Latout[3][11] to direction: E
+MOVE	from Latout[4][11] to direction: S
+MOVE	from Latout[4][12] to direction: E
+MOVE	from Latout[5][12] to direction: N
+MOVE	from Latout[5][11] to direction: N
+MOVE	from Latout[5][10] to direction: W
+CHARGE	battery Level =  7
+CHARGE	battery Level =  12
+CHARGE	battery Level =  17
+CHARGE	battery Level =  22
+CHARGE	battery Level =  27
+CHARGE	battery Level =  32
+CHARGE	battery Level =  37
+CHARGE	battery Level =  42
+CHARGE	battery Level =  47
+CHARGE	battery Level =  52
+CHARGE	battery Level =  57
+CHARGE	battery Level =  62
+CHARGE	battery Level =  67
+CHARGE	battery Level =  72
+CHARGE	battery Level =  77
+CHARGE	battery Level =  82
+CHARGE	battery Level =  87
+CHARGE	battery Level =  92
+CHARGE	battery Level =  97
+CHARGE	battery Level =  100
+MOVE	from Latout[4][10] to direction: W
+MOVE	from Latout[3][10] to direction: W
+MOVE	from Latout[2][10] to direction: E
+MOVE	from Latout[3][10] to direction: W
+MOVE	from Latout[2][10] to direction: E
+MOVE	from Latout[3][10] to direction: S
+MOVE	from Latout[3][11] to direction: N
+MOVE	from Latout[3][10] to direction: E
+MOVE	from Latout[4][10] to direction: N
+MOVE	from Latout[4][9] to direction: N
+MOVE	from Latout[4][8] to direction: N
+MOVE	from Latout[4][7] to direction: W
+MOVE	from Latout[3][7] to direction: E
+MOVE	from Latout[4][7] to direction: N
+MOVE	from Latout[4][6] to direction: W
+MOVE	from Latout[3][6] to direction: W
+MOVE	from Latout[2][6] to direction: W
+MOVE	from Latout[1][6] to direction: N
+CLEAN	new dirt Level = 0
+MOVE	from Latout[1][5] to direction: S
+MOVE	from Latout[1][6] to direction: E
+MOVE	from Latout[2][6] to direction: E
+MOVE	from Latout[3][6] to direction: W
+MOVE	from Latout[2][6] to direction: S
+MOVE	from Latout[2][7] to direction: S
+MOVE	from Latout[2][8] to direction: N
+MOVE	from Latout[2][7] to direction: E
+MOVE	from Latout[3][7] to direction: S
+MOVE	from Latout[3][8] to direction: N
+MOVE	from Latout[3][7] to direction: E
+MOVE	from Latout[4][7] to direction: N
+MOVE	from Latout[4][6] to direction: W
+MOVE	from Latout[3][6] to direction: N
+MOVE	from Latout[3][5] to direction: N
+CLEAN	new dirt Level = 2
+CLEAN	new dirt Level = 1
+CLEAN	new dirt Level = 0
+MOVE	from Latout[3][4] to direction: S
+MOVE	from Latout[3][5] to direction: N
+MOVE	from Latout[3][4] to direction: S
+MOVE	from Latout[3][5] to direction: W
+MOVE	from Latout[2][5] to direction: S
+MOVE	from Latout[2][6] to direction: S
+MOVE	from Latout[2][7] to direction: E
+MOVE	from Latout[3][7] to direction: N
+MOVE	from Latout[3][6] to direction: S
+MOVE	from Latout[3][7] to direction: E
+MOVE	from Latout[4][7] to direction: N
+MOVE	from Latout[4][6] to direction: W
+MOVE	from Latout[3][6] to direction: N
+MOVE	from Latout[3][5] to direction: W
+MOVE	from Latout[2][5] to direction: S
+MOVE	from Latout[2][6] to direction: S
+MOVE	from Latout[2][7] to direction: N
+MOVE	from Latout[2][6] to direction: W
+MOVE	from Latout[1][6] to direction: E
+MOVE	from Latout[2][6] to direction: S
+MOVE	from Latout[2][7] to direction: W
+MOVE	from Latout[1][7] to direction: N
+MOVE	from Latout[1][6] to direction: S
+MOVE	from Latout[1][7] to direction: E
+MOVE	from Latout[2][7] to direction: S
+MOVE	from Latout[2][8] to direction: W
+MOVE	from Latout[1][8] to direction: E
+MOVE	from Latout[2][8] to direction: E
+MOVE	from Latout[3][8] to direction: E
+MOVE	from Latout[4][8] to direction: E
+MOVE	from Latout[5][8] to direction: N
+MOVE	from Latout[5][7] to direction: W
+MOVE	from Latout[4][7] to direction: E
+MOVE	from Latout[5][7] to direction: S
+MOVE	from Latout[5][8] to direction: W
+MOVE	from Latout[4][8] to direction: W
+MOVE	from Latout[3][8] to direction: W
+MOVE	from Latout[2][8] to direction: N
+MOVE	from Latout[2][7] to direction: N
+MOVE	from Latout[2][6] to direction: N
+MOVE	from Latout[2][5] to direction: E
+MOVE	from Latout[3][5] to direction: S
+MOVE	from Latout[3][6] to direction: E
+MOVE	from Latout[4][6] to direction: S
+MOVE	from Latout[4][7] to direction: W
+MOVE	from Latout[3][7] to direction: W
+MOVE	from Latout[2][7] to direction: N
+MOVE	from Latout[2][6] to direction: N
+MOVE	from Latout[2][5] to direction: E
+MOVE	from Latout[3][5] to direction: S
+MOVE	from Latout[3][6] to direction: E
+MOVE	from Latout[4][6] to direction: S
+MOVE	from Latout[4][7] to direction: W
+MOVE	from Latout[3][7] to direction: W
+MOVE	from Latout[2][7] to direction: N
+MOVE	from Latout[2][6] to direction: E
+MOVE	from Latout[3][6] to direction: E
+MOVE	from Latout[4][6] to direction: S
+MOVE	from Latout[4][7] to direction: S
+MOVE	from Latout[4][8] to direction: S
+MOVE	from Latout[4][9] to direction: S
+CHARGE	battery Level =  7
+CHARGE	battery Level =  12
+CHARGE	battery Level =  17
+CHARGE	battery Level =  22
+CHARGE	battery Level =  27
+CHARGE	battery Level =  32
+CHARGE	battery Level =  37
+CHARGE	battery Level =  42
+CHARGE	battery Level =  47
+CHARGE	battery Level =  52
+CHARGE	battery Level =  57
+CHARGE	battery Level =  62
+CHARGE	battery Level =  67
+CHARGE	battery Level =  72
+CHARGE	battery Level =  77
+CHARGE	battery Level =  82
+CHARGE	battery Level =  87
+CHARGE	battery Level =  92
+CHARGE	battery Level =  97
+CHARGE	battery Level =  100
+MOVE	from Latout[4][10] to direction: S
+MOVE	from Latout[4][11] to direction: N
+MOVE	from Latout[4][10] to direction: W
+MOVE	from Latout[3][10] to direction: N
+MOVE	from Latout[3][9] to direction: S
+MOVE	from Latout[3][10] to direction: N
+MOVE	from Latout[3][9] to direction: W
+MOVE	from Latout[2][9] to direction: S
+MOVE	from Latout[2][10] to direction: S
+MOVE	from Latout[2][11] to direction: E
+MOVE	from Latout[3][11] to direction: S
+MOVE	from Latout[3][12] to direction: W
+MOVE	from Latout[2][12] to direction: E
+MOVE	from Latout[3][12] to direction: W
+MOVE	from Latout[2][12] to direction: N
+MOVE	from Latout[2][11] to direction: S
+MOVE	from Latout[2][12] to direction: E
+MOVE	from Latout[3][12] to direction: E
+MOVE	from Latout[4][12] to direction: N
+MOVE	from Latout[4][11] to direction: W
+MOVE	from Latout[3][11] to direction: N
+MOVE	from Latout[3][10] to direction: W
+MOVE	from Latout[2][10] to direction: S
 MOVE	from Latout[2][11] to direction: W
 MOVE	from Latout[1][11] to direction: E
-Total Steps: 100
-Remaining Dirt: 123
-Vacuum is Dead: No	 (battery Level = 300)
-Mission Succeeded: No	 (Remaining Dirt = 123)
+MOVE	from Latout[2][11] to direction: E
+MOVE	from Latout[3][11] to direction: W
+MOVE	from Latout[2][11] to direction: S
+MOVE	from Latout[2][12] to direction: N
+MOVE	from Latout[2][11] to direction: W
+MOVE	from Latout[1][11] to direction: N
+MOVE	from Latout[1][10] to direction: S
+MOVE	from Latout[1][11] to direction: N
+MOVE	from Latout[1][10] to direction: E
+MOVE	from Latout[2][10] to direction: E
+MOVE	from Latout[3][10] to direction: W
+MOVE	from Latout[2][10] to direction: N
+MOVE	from Latout[2][9] to direction: W
+MOVE	from Latout[1][9] to direction: N
+MOVE	from Latout[1][8] to direction: E
+MOVE	from Latout[2][8] to direction: W
+MOVE	from Latout[1][8] to direction: N
+MOVE	from Latout[1][7] to direction: N
+MOVE	from Latout[1][6] to direction: E
+MOVE	from Latout[2][6] to direction: E
+MOVE	from Latout[3][6] to direction: N
+MOVE	from Latout[3][5] to direction: N
+MOVE	from Latout[3][4] to direction: W
+CLEAN	new dirt Level = 1
+CLEAN	new dirt Level = 0
+MOVE	from Latout[2][4] to direction: N
+CLEAN	new dirt Level = 1
+CLEAN	new dirt Level = 0
+MOVE	from Latout[2][3] to direction: E
+CLEAN	new dirt Level = 2
+CLEAN	new dirt Level = 1
+CLEAN	new dirt Level = 0
+MOVE	from Latout[3][3] to direction: N
+CLEAN	new dirt Level = 2
+CLEAN	new dirt Level = 1
+CLEAN	new dirt Level = 0
+MOVE	from Latout[3][2] to direction: E
+CLEAN	new dirt Level = 3
+CLEAN	new dirt Level = 2
+CLEAN	new dirt Level = 1
+CLEAN	new dirt Level = 0
+MOVE	from Latout[4][2] to direction: E
+MOVE	from Latout[5][2] to direction: W
+MOVE	from Latout[4][2] to direction: W
+MOVE	from Latout[3][2] to direction: S
+MOVE	from Latout[3][3] to direction: W
+MOVE	from Latout[2][3] to direction: S
+MOVE	from Latout[2][4] to direction: E
+MOVE	from Latout[3][4] to direction: S
+MOVE	from Latout[3][5] to direction: S
+MOVE	from Latout[3][6] to direction: W
+MOVE	from Latout[2][6] to direction: W
+MOVE	from Latout[1][6] to direction: S
+MOVE	from Latout[1][7] to direction: S
+MOVE	from Latout[1][8] to direction: S
+MOVE	from Latout[1][9] to direction: E
+MOVE	from Latout[2][9] to direction: S
+MOVE	from Latout[2][10] to direction: W
+MOVE	from Latout[1][10] to direction: S
+MOVE	from Latout[1][11] to direction: E
+MOVE	from Latout[2][11] to direction: N
+MOVE	from Latout[2][10] to direction: E
+MOVE	from Latout[3][10] to direction: S
+MOVE	from Latout[3][11] to direction: E
+MOVE	from Latout[4][11] to direction: S
+MOVE	from Latout[4][12] to direction: W
+MOVE	from Latout[3][12] to direction: N
+MOVE	from Latout[3][11] to direction: W
+MOVE	from Latout[2][11] to direction: N
+MOVE	from Latout[2][10] to direction: N
+MOVE	from Latout[2][9] to direction: E
+MOVE	from Latout[3][9] to direction: S
+MOVE	from Latout[3][10] to direction: E
+CHARGE	battery Level =  7
+CHARGE	battery Level =  12
+CHARGE	battery Level =  17
+CHARGE	battery Level =  22
+CHARGE	battery Level =  27
+CHARGE	battery Level =  32
+CHARGE	battery Level =  37
+CHARGE	battery Level =  42
+CHARGE	battery Level =  47
+CHARGE	battery Level =  52
+CHARGE	battery Level =  57
+CHARGE	battery Level =  62
+CHARGE	battery Level =  67
+CHARGE	battery Level =  72
+CHARGE	battery Level =  77
+CHARGE	battery Level =  82
+CHARGE	battery Level =  87
+CHARGE	battery Level =  92
+CHARGE	battery Level =  97
+CHARGE	battery Level =  100
+MOVE	from Latout[4][10] to direction: E
+MOVE	from Latout[5][10] to direction: W
+MOVE	from Latout[4][10] to direction: N
+MOVE	from Latout[4][9] to direction: N
+MOVE	from Latout[4][8] to direction: N
+MOVE	from Latout[4][7] to direction: W
+MOVE	from Latout[3][7] to direction: E
+MOVE	from Latout[4][7] to direction: S
+MOVE	from Latout[4][8] to direction: S
+MOVE	from Latout[4][9] to direction: S
+MOVE	from Latout[4][10] to direction: W
+MOVE	from Latout[3][10] to direction: N
+MOVE	from Latout[3][9] to direction: S
+MOVE	from Latout[3][10] to direction: N
+MOVE	from Latout[3][9] to direction: E
+MOVE	from Latout[4][9] to direction: E
+MOVE	from Latout[5][9] to direction: W
+MOVE	from Latout[4][9] to direction: E
+MOVE	from Latout[5][9] to direction: N
+MOVE	from Latout[5][8] to direction: S
+MOVE	from Latout[5][9] to direction: S
+MOVE	from Latout[5][10] to direction: S
+MOVE	from Latout[5][11] to direction: S
+MOVE	from Latout[5][12] to direction: W
+MOVE	from Latout[4][12] to direction: W
+MOVE	from Latout[3][12] to direction: W
+MOVE	from Latout[2][12] to direction: E
+MOVE	from Latout[3][12] to direction: N
+MOVE	from Latout[3][11] to direction: N
+MOVE	from Latout[3][10] to direction: E
+MOVE	from Latout[4][10] to direction: S
+MOVE	from Latout[4][11] to direction: S
+MOVE	from Latout[4][12] to direction: N
+MOVE	from Latout[4][11] to direction: E
+MOVE	from Latout[5][11] to direction: W
+MOVE	from Latout[4][11] to direction: E
+MOVE	from Latout[5][11] to direction: W
+MOVE	from Latout[4][11] to direction: E
+MOVE	from Latout[5][11] to direction: W
+MOVE	from Latout[4][11] to direction: E
+MOVE	from Latout[5][11] to direction: S
+MOVE	from Latout[5][12] to direction: N
+MOVE	from Latout[5][11] to direction: S
+MOVE	from Latout[5][12] to direction: W
+MOVE	from Latout[4][12] to direction: N
+MOVE	from Latout[4][11] to direction: W
+MOVE	from Latout[3][11] to direction: N
+MOVE	from Latout[3][10] to direction: S
+MOVE	from Latout[3][11] to direction: W
+MOVE	from Latout[2][11] to direction: E
+MOVE	from Latout[3][11] to direction: S
+MOVE	from Latout[3][12] to direction: W
+MOVE	from Latout[2][12] to direction: W
+MOVE	from Latout[1][12] to direction: N
+MOVE	from Latout[1][11] to direction: N
+MOVE	from Latout[1][10] to direction: N
+MOVE	from Latout[1][9] to direction: S
+MOVE	from Latout[1][10] to direction: S
+MOVE	from Latout[1][11] to direction: N
+MOVE	from Latout[1][10] to direction: E
+MOVE	from Latout[2][10] to direction: E
+MOVE	from Latout[3][10] to direction: S
+MOVE	from Latout[3][11] to direction: N
+MOVE	from Latout[3][10] to direction: N
+MOVE	from Latout[3][9] to direction: N
+MOVE	from Latout[3][8] to direction: S
+MOVE	from Latout[3][9] to direction: N
+MOVE	from Latout[3][8] to direction: S
+MOVE	from Latout[3][9] to direction: N
+MOVE	from Latout[3][8] to direction: W
+MOVE	from Latout[2][8] to direction: W
+MOVE	from Latout[1][8] to direction: S
+MOVE	from Latout[1][9] to direction: N
+MOVE	from Latout[1][8] to direction: N
+MOVE	from Latout[1][7] to direction: S
+MOVE	from Latout[1][8] to direction: E
+MOVE	from Latout[2][8] to direction: W
+MOVE	from Latout[1][8] to direction: E
+MOVE	from Latout[2][8] to direction: S
+MOVE	from Latout[2][9] to direction: S
+MOVE	from Latout[2][10] to direction: N
+MOVE	from Latout[2][9] to direction: N
+MOVE	from Latout[2][8] to direction: E
+MOVE	from Latout[3][8] to direction: S
+MOVE	from Latout[3][9] to direction: S
+MOVE	from Latout[3][10] to direction: W
+MOVE	from Latout[2][10] to direction: W
+MOVE	from Latout[1][10] to direction: S
+MOVE	from Latout[1][11] to direction: S
+MOVE	from Latout[1][12] to direction: E
+MOVE	from Latout[2][12] to direction: E
+MOVE	from Latout[3][12] to direction: N
+MOVE	from Latout[3][11] to direction: E
+MOVE	from Latout[4][11] to direction: S
+MOVE	from Latout[4][12] to direction: E
+MOVE	from Latout[5][12] to direction: N
+MOVE	from Latout[5][11] to direction: W
+MOVE	from Latout[4][11] to direction: N
+CHARGE	battery Level =  7
+CHARGE	battery Level =  12
+CHARGE	battery Level =  17
+CHARGE	battery Level =  22
+CHARGE	battery Level =  27
+CHARGE	battery Level =  32
+CHARGE	battery Level =  37
+CHARGE	battery Level =  42
+CHARGE	battery Level =  47
+CHARGE	battery Level =  52
+CHARGE	battery Level =  57
+CHARGE	battery Level =  62
+CHARGE	battery Level =  67
+CHARGE	battery Level =  72
+CHARGE	battery Level =  77
+CHARGE	battery Level =  82
+CHARGE	battery Level =  87
+CHARGE	battery Level =  92
+CHARGE	battery Level =  97
+CHARGE	battery Level =  100
+MOVE	from Latout[4][10] to direction: S
+MOVE	from Latout[4][11] to direction: E
+MOVE	from Latout[5][11] to direction: W
+MOVE	from Latout[4][11] to direction: W
+MOVE	from Latout[3][11] to direction: E
+MOVE	from Latout[4][11] to direction: W
+MOVE	from Latout[3][11] to direction: E
+MOVE	from Latout[4][11] to direction: N
+MOVE	from Latout[4][10] to direction: N
+MOVE	from Latout[4][9] to direction: W
+MOVE	from Latout[3][9] to direction: W
+MOVE	from Latout[2][9] to direction: N
+MOVE	from Latout[2][8] to direction: E
+MOVE	from Latout[3][8] to direction: W
+MOVE	from Latout[2][8] to direction: N
+MOVE	from Latout[2][7] to direction: E
+MOVE	from Latout[3][7] to direction: S
+MOVE	from Latout[3][8] to direction: E
+MOVE	from Latout[4][8] to direction: S
+MOVE	from Latout[4][9] to direction: W
+MOVE	from Latout[3][9] to direction: E
+MOVE	from Latout[4][9] to direction: W
+MOVE	from Latout[3][9] to direction: W
+MOVE	from Latout[2][9] to direction: S
+MOVE	from Latout[2][10] to direction: N
+MOVE	from Latout[2][9] to direction: N
+MOVE	from Latout[2][8] to direction: S
+MOVE	from Latout[2][9] to direction: E
+MOVE	from Latout[3][9] to direction: S
+MOVE	from Latout[3][10] to direction: E
+MOVE	from Latout[4][10] to direction: E
+MOVE	from Latout[5][10] to direction: W
+MOVE	from Latout[4][10] to direction: N
+MOVE	from Latout[4][9] to direction: W
+MOVE	from Latout[3][9] to direction: E
+MOVE	from Latout[4][9] to direction: S
+MOVE	from Latout[4][10] to direction: W
+MOVE	from Latout[3][10] to direction: N
+MOVE	from Latout[3][9] to direction: E
+MOVE	from Latout[4][9] to direction: E
+MOVE	from Latout[5][9] to direction: W
+MOVE	from Latout[4][9] to direction: N
+MOVE	from Latout[4][8] to direction: N
+MOVE	from Latout[4][7] to direction: S
+MOVE	from Latout[4][8] to direction: W
+MOVE	from Latout[3][8] to direction: E
+MOVE	from Latout[4][8] to direction: S
+MOVE	from Latout[4][9] to direction: W
+MOVE	from Latout[3][9] to direction: E
+MOVE	from Latout[4][9] to direction: W
+MOVE	from Latout[3][9] to direction: S
+MOVE	from Latout[3][10] to direction: W
+MOVE	from Latout[2][10] to direction: E
+MOVE	from Latout[3][10] to direction: S
+MOVE	from Latout[3][11] to direction: S
+MOVE	from Latout[3][12] to direction: E
+MOVE	from Latout[4][12] to direction: W
+MOVE	from Latout[3][12] to direction: N
+MOVE	from Latout[3][11] to direction: W
+MOVE	from Latout[2][11] to direction: W
+MOVE	from Latout[1][11] to direction: N
+MOVE	from Latout[1][10] to direction: N
+MOVE	from Latout[1][9] to direction: E
+MOVE	from Latout[2][9] to direction: N
+MOVE	from Latout[2][8] to direction: S
+MOVE	from Latout[2][9] to direction: W
+MOVE	from Latout[1][9] to direction: N
+MOVE	from Latout[1][8] to direction: N
+MOVE	from Latout[1][7] to direction: S
+MOVE	from Latout[1][8] to direction: E
+MOVE	from Latout[2][8] to direction: W
+MOVE	from Latout[1][8] to direction: S
+MOVE	from Latout[1][9] to direction: S
+MOVE	from Latout[1][10] to direction: N
+MOVE	from Latout[1][9] to direction: S
+MOVE	from Latout[1][10] to direction: N
+MOVE	from Latout[1][9] to direction: N
+MOVE	from Latout[1][8] to direction: N
+MOVE	from Latout[1][7] to direction: N
+MOVE	from Latout[1][6] to direction: N
+MOVE	from Latout[1][5] to direction: N
+CLEAN	new dirt Level = 0
+MOVE	from Latout[1][4] to direction: S
+MOVE	from Latout[1][5] to direction: N
+MOVE	from Latout[1][4] to direction: N
+CLEAN	new dirt Level = 0
+MOVE	from Latout[1][3] to direction: S
+MOVE	from Latout[1][4] to direction: S
+MOVE	from Latout[1][5] to direction: S
+MOVE	from Latout[1][6] to direction: S
+MOVE	from Latout[1][7] to direction: S
+MOVE	from Latout[1][8] to direction: S
+MOVE	from Latout[1][9] to direction: S
+MOVE	from Latout[1][10] to direction: S
+MOVE	from Latout[1][11] to direction: E
+MOVE	from Latout[2][11] to direction: E
+MOVE	from Latout[3][11] to direction: N
+MOVE	from Latout[3][10] to direction: E
+CHARGE	battery Level =  7
+CHARGE	battery Level =  12
+CHARGE	battery Level =  17
+CHARGE	battery Level =  22
+CHARGE	battery Level =  27
+CHARGE	battery Level =  32
+CHARGE	battery Level =  37
+CHARGE	battery Level =  42
+CHARGE	battery Level =  47
+CHARGE	battery Level =  52
+CHARGE	battery Level =  57
+CHARGE	battery Level =  62
+CHARGE	battery Level =  67
+CHARGE	battery Level =  72
+CHARGE	battery Level =  77
+CHARGE	battery Level =  82
+CHARGE	battery Level =  87
+CHARGE	battery Level =  92
+CHARGE	battery Level =  97
+CHARGE	battery Level =  100
+MOVE	from Latout[4][10] to direction: N
+MOVE	from Latout[4][9] to direction: N
+MOVE	from Latout[4][8] to direction: S
+MOVE	from Latout[4][9] to direction: N
+MOVE	from Latout[4][8] to direction: E
+MOVE	from Latout[5][8] to direction: W
+MOVE	from Latout[4][8] to direction: S
+MOVE	from Latout[4][9] to direction: E
+MOVE	from Latout[5][9] to direction: N
+MOVE	from Latout[5][8] to direction: S
+MOVE	from Latout[5][9] to direction: S
+MOVE	from Latout[5][10] to direction: N
+MOVE	from Latout[5][9] to direction: W
+MOVE	from Latout[4][9] to direction: E
+MOVE	from Latout[5][9] to direction: N
+MOVE	from Latout[5][8] to direction: S
+MOVE	from Latout[5][9] to direction: N
+MOVE	from Latout[5][8] to direction: S
+MOVE	from Latout[5][9] to direction: N
+MOVE	from Latout[5][8] to direction: S
+MOVE	from Latout[5][9] to direction: N
+MOVE	from Latout[5][8] to direction: N
+MOVE	from Latout[5][7] to direction: N
+MOVE	from Latout[5][6] to direction: S
+MOVE	from Latout[5][7] to direction: N
+MOVE	from Latout[5][6] to direction: S
+MOVE	from Latout[5][7] to direction: S
+MOVE	from Latout[5][8] to direction: S
+MOVE	from Latout[5][9] to direction: S
+MOVE	from Latout[5][10] to direction: N
+MOVE	from Latout[5][9] to direction: N
+MOVE	from Latout[5][8] to direction: W
+MOVE	from Latout[4][8] to direction: W
+MOVE	from Latout[3][8] to direction: N
+MOVE	from Latout[3][7] to direction: E
+MOVE	from Latout[4][7] to direction: S
+MOVE	from Latout[4][8] to direction: E
+MOVE	from Latout[5][8] to direction: N
+MOVE	from Latout[5][7] to direction: W
+MOVE	from Latout[4][7] to direction: S
+MOVE	from Latout[4][8] to direction: N
+MOVE	from Latout[4][7] to direction: N
+MOVE	from Latout[4][6] to direction: W
+MOVE	from Latout[3][6] to direction: E
+MOVE	from Latout[4][6] to direction: N
+CLEAN	new dirt Level = 3
+CLEAN	new dirt Level = 2
+CLEAN	new dirt Level = 1
+CLEAN	new dirt Level = 0
+MOVE	from Latout[4][5] to direction: W
+MOVE	from Latout[3][5] to direction: W
+MOVE	from Latout[2][5] to direction: E
+MOVE	from Latout[3][5] to direction: N
+MOVE	from Latout[3][4] to direction: E
+CLEAN	new dirt Level = 3
+CLEAN	new dirt Level = 2
+CLEAN	new dirt Level = 1
+CLEAN	new dirt Level = 0
+MOVE	from Latout[4][4] to direction: E
+CLEAN	new dirt Level = 4
+CLEAN	new dirt Level = 3
+CLEAN	new dirt Level = 2
+CLEAN	new dirt Level = 1
+CLEAN	new dirt Level = 0
+MOVE	from Latout[5][4] to direction: S
+CLEAN	new dirt Level = 4
+CLEAN	new dirt Level = 3
+CLEAN	new dirt Level = 2
+CLEAN	new dirt Level = 1
+CLEAN	new dirt Level = 0
+MOVE	from Latout[5][5] to direction: W
+MOVE	from Latout[4][5] to direction: W
+MOVE	from Latout[3][5] to direction: E
+MOVE	from Latout[4][5] to direction: E
+MOVE	from Latout[5][5] to direction: N
+MOVE	from Latout[5][4] to direction: N
+CLEAN	new dirt Level = 4
+CLEAN	new dirt Level = 3
+CLEAN	new dirt Level = 2
+CLEAN	new dirt Level = 1
+MOVE	from Latout[5][3] to direction: S
+MOVE	from Latout[5][4] to direction: W
+MOVE	from Latout[4][4] to direction: W
+MOVE	from Latout[3][4] to direction: S
+MOVE	from Latout[3][5] to direction: E
+MOVE	from Latout[4][5] to direction: S
+MOVE	from Latout[4][6] to direction: S
+MOVE	from Latout[4][7] to direction: E
+MOVE	from Latout[5][7] to direction: S
+MOVE	from Latout[5][8] to direction: W
+MOVE	from Latout[4][8] to direction: N
+MOVE	from Latout[4][7] to direction: W
+MOVE	from Latout[3][7] to direction: S
+MOVE	from Latout[3][8] to direction: E
+MOVE	from Latout[4][8] to direction: E
+MOVE	from Latout[5][8] to direction: S
+MOVE	from Latout[5][9] to direction: W
+MOVE	from Latout[4][9] to direction: S
+CHARGE	battery Level =  7
+CHARGE	battery Level =  12
+CHARGE	battery Level =  17
+CHARGE	battery Level =  22
+CHARGE	battery Level =  27
+CHARGE	battery Level =  32
+CHARGE	battery Level =  37
+CHARGE	battery Level =  42
+CHARGE	battery Level =  47
+CHARGE	battery Level =  52
+CHARGE	battery Level =  57
+CHARGE	battery Level =  62
+CHARGE	battery Level =  67
+CHARGE	battery Level =  72
+CHARGE	battery Level =  77
+CHARGE	battery Level =  82
+CHARGE	battery Level =  87
+CHARGE	battery Level =  92
+CHARGE	battery Level =  97
+CHARGE	battery Level =  100
+MOVE	from Latout[4][10] to direction: N
+MOVE	from Latout[4][9] to direction: S
+MOVE	from Latout[4][10] to direction: S
+MOVE	from Latout[4][11] to direction: W
+MOVE	from Latout[3][11] to direction: N
+MOVE	from Latout[3][10] to direction: E
+MOVE	from Latout[4][10] to direction: S
+MOVE	from Latout[4][11] to direction: N
+MOVE	from Latout[4][10] to direction: W
+MOVE	from Latout[3][10] to direction: S
+MOVE	from Latout[3][11] to direction: W
+MOVE	from Latout[2][11] to direction: S
+MOVE	from Latout[2][12] to direction: W
+MOVE	from Latout[1][12] to direction: E
+MOVE	from Latout[2][12] to direction: N
+MOVE	from Latout[2][11] to direction: N
+MOVE	from Latout[2][10] to direction: N
+MOVE	from Latout[2][9] to direction: W
+MOVE	from Latout[1][9] to direction: N
+MOVE	from Latout[1][8] to direction: N
+MOVE	from Latout[1][7] to direction: N
+MOVE	from Latout[1][6] to direction: S
+MOVE	from Latout[1][7] to direction: E
+MOVE	from Latout[2][7] to direction: N
+MOVE	from Latout[2][6] to direction: N
+MOVE	from Latout[2][5] to direction: S
+MOVE	from Latout[2][6] to direction: S
+MOVE	from Latout[2][7] to direction: S
+MOVE	from Latout[2][8] to direction: E
+MOVE	from Latout[3][8] to direction: E
+MOVE	from Latout[4][8] to direction: E
+MOVE	from Latout[5][8] to direction: W
+MOVE	from Latout[4][8] to direction: S
+MOVE	from Latout[4][9] to direction: E
+MOVE	from Latout[5][9] to direction: W
+MOVE	from Latout[4][9] to direction: W
+MOVE	from Latout[3][9] to direction: S
+MOVE	from Latout[3][10] to direction: N
+MOVE	from Latout[3][9] to direction: N
+MOVE	from Latout[3][8] to direction: N
+MOVE	from Latout[3][7] to direction: S
+MOVE	from Latout[3][8] to direction: E
+MOVE	from Latout[4][8] to direction: W
+MOVE	from Latout[3][8] to direction: S
+MOVE	from Latout[3][9] to direction: N
+MOVE	from Latout[3][8] to direction: S
+MOVE	from Latout[3][9] to direction: S
+MOVE	from Latout[3][10] to direction: S
+MOVE	from Latout[3][11] to direction: W
+MOVE	from Latout[2][11] to direction: S
+MOVE	from Latout[2][12] to direction: W
+MOVE	from Latout[1][12] to direction: N
+MOVE	from Latout[1][11] to direction: S
+MOVE	from Latout[1][12] to direction: N
+MOVE	from Latout[1][11] to direction: S
+Total Steps: 1000
+Remaining Dirt: 28
+Vacuum is Dead: No	 (battery Level = 45)
+Mission Succeeded: No	 (Remaining Dirt = 28)

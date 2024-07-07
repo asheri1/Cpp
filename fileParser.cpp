@@ -32,7 +32,7 @@ void FileParser::parseFile(const std::string& file_path) {
             } else {
                 std::vector<char> fixLine = std::vector<char>(line.begin(), line.end());
                 lineFixer(fixLine);
-                if(fixLine[0] == '\r' || fixLine.empty() == '\r'){
+                if(fixLine[0] == '\r' || fixLine.empty()){
                     continue;
                 }
                 layout.push_back(fixLine);
