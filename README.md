@@ -99,6 +99,7 @@ The program generates an output file which has the following data:
 ## Example
 
 ### Input File - exmaple (`inputfile.txt`)
+```
 batteryCapacity= 150
 maxSteps= 5000
 1011022030456708@8934
@@ -108,8 +109,10 @@ maxSteps= 5000
 f025#2203 4267##88934
 013####3 4567##88934
 #####################
+```
 
 ### Output File - example (`output.txt`)
+```
 MOVE	from Latout[17][1] to direction: E
 CLEAN	new dirt Level = 7
 ...
@@ -123,4 +126,5 @@ Total Steps: 5000
 Remaining Dirt: 26
 Vacuum is Dead: No	 (battery Level = 71)
 Mission Succeeded: No	 (Remaining Dirt = 26)
+```
 
